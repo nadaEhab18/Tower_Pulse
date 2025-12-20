@@ -1,0 +1,1888 @@
+[0m20:34:32.764123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A6090830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A3D15BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A70CBD90>]}
+
+
+============================== 20:34:32.771952 | 3fd5148d-c16d-4d5c-b3ac-b67c570453a7 ==============================
+[0m20:34:32.771952 [info ] [MainThread]: Running with dbt=1.10.13
+[0m20:34:32.773487 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt debug', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt'}
+[0m20:34:32.816201 [info ] [MainThread]: dbt version: 1.10.13
+[0m20:34:32.816983 [info ] [MainThread]: python version: 3.13.5
+[0m20:34:32.817572 [info ] [MainThread]: python path: C:\Users\Mina Magdy\venv\Scripts\python.exe
+[0m20:34:32.818200 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m20:34:33.304259 [info ] [MainThread]: Using profiles dir at C:\Users\Mina Magdy\.dbt
+[0m20:34:33.305129 [info ] [MainThread]: Using profiles.yml file at C:\Users\Mina Magdy\.dbt\profiles.yml
+[0m20:34:33.305637 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Mina Magdy\grad_project\dbt_project.yml
+[0m20:34:33.307314 [info ] [MainThread]: adapter type: snowflake
+[0m20:34:33.308032 [info ] [MainThread]: adapter version: 1.10.2
+[0m20:34:33.423926 [info ] [MainThread]: Configuration:
+[0m20:34:33.424633 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:34:33.425216 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:34:33.425789 [info ] [MainThread]: Required dependencies:
+[0m20:34:33.426325 [debug] [MainThread]: Executing "git --help"
+[0m20:34:33.469949 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:34:33.470549 [debug] [MainThread]: STDERR: "b''"
+[0m20:34:33.470988 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:34:33.471592 [info ] [MainThread]: Connection:
+[0m20:34:33.472157 [info ] [MainThread]:   account: LUQEQOJ-NT56085
+[0m20:34:33.472709 [info ] [MainThread]:   user: MINAMAGDY19700
+[0m20:34:33.473233 [info ] [MainThread]:   database: ANOMALY_DETECTION_SYSTEM
+[0m20:34:33.473833 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m20:34:33.474305 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m20:34:33.474715 [info ] [MainThread]:   schema: SC1
+[0m20:34:33.475078 [info ] [MainThread]:   authenticator: None
+[0m20:34:33.475412 [info ] [MainThread]:   oauth_client_id: None
+[0m20:34:33.475748 [info ] [MainThread]:   query_tag: None
+[0m20:34:33.476171 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:34:33.476623 [info ] [MainThread]:   host: None
+[0m20:34:33.477084 [info ] [MainThread]:   port: None
+[0m20:34:33.477549 [info ] [MainThread]:   proxy_host: None
+[0m20:34:33.477903 [info ] [MainThread]:   proxy_port: None
+[0m20:34:33.478224 [info ] [MainThread]:   protocol: None
+[0m20:34:33.478633 [info ] [MainThread]:   connect_retries: 1
+[0m20:34:33.479115 [info ] [MainThread]:   connect_timeout: None
+[0m20:34:33.479586 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:34:33.479977 [info ] [MainThread]:   retry_all: False
+[0m20:34:33.480407 [info ] [MainThread]:   insecure_mode: False
+[0m20:34:33.480955 [info ] [MainThread]:   reuse_connections: True
+[0m20:34:33.481482 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m20:34:33.482501 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m20:34:34.047001 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:34:38.918120 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:34:38.919054 [debug] [MainThread]: On debug: select 1 as id
+[0m20:34:38.919710 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:34:42.647999 [debug] [MainThread]: SQL status: SUCCESS 1 in 3.728 seconds
+[0m20:34:42.650167 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:34:42.651224 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:34:42.652827 [debug] [MainThread]: Command `dbt debug` succeeded at 20:34:42.652633 after 10.12 seconds
+[0m20:34:42.653333 [debug] [MainThread]: Connection 'debug' was left open.
+[0m20:34:42.653788 [debug] [MainThread]: On debug: Close
+[0m20:34:42.963797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A93E4770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A9943890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A8D7A030>]}
+[0m20:34:42.964997 [debug] [MainThread]: Flushing usage events
+[0m20:34:43.980719 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:34:55.028822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B1E950830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B1C5D5BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B1F98FD90>]}
+
+
+============================== 20:34:55.037322 | f7cd1c23-03df-4a7c-bd0b-381c68c0d57e ==============================
+[0m20:34:55.037322 [info ] [MainThread]: Running with dbt=1.10.13
+[0m20:34:55.038779 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt run', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'False', 'printer_width': '80', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m20:34:55.703561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f7cd1c23-03df-4a7c-bd0b-381c68c0d57e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B1ED04640>]}
+[0m20:34:55.779917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f7cd1c23-03df-4a7c-bd0b-381c68c0d57e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B21566F10>]}
+[0m20:34:55.781423 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m20:34:56.069648 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m20:34:56.071192 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:34:56.072267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f7cd1c23-03df-4a7c-bd0b-381c68c0d57e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B2154E750>]}
+[0m20:34:59.685387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f7cd1c23-03df-4a7c-bd0b-381c68c0d57e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B218D64E0>]}
+[0m20:34:59.762200 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Mina Magdy\grad_project\target\manifest.json
+[0m20:34:59.765986 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Mina Magdy\grad_project\target\semantic_manifest.json
+[0m20:34:59.794170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f7cd1c23-03df-4a7c-bd0b-381c68c0d57e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B21C36510>]}
+[0m20:34:59.794705 [info ] [MainThread]: Found 2 models, 4 data tests, 479 macros
+[0m20:34:59.795469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f7cd1c23-03df-4a7c-bd0b-381c68c0d57e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B21A44870>]}
+[0m20:34:59.797496 [info ] [MainThread]: 
+[0m20:34:59.798169 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:34:59.798740 [info ] [MainThread]: 
+[0m20:34:59.799645 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:34:59.804864 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m20:34:59.868305 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m20:34:59.868826 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+[0m20:34:59.869313 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:35:01.843564 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.974 seconds
+[0m20:35:01.848110 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m20:35:01.864396 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m20:35:01.864835 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: show objects in ANOMALY_DETECTION_SYSTEM.SC1
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */;
+[0m20:35:01.865148 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:35:03.590108 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 1.725 seconds
+[0m20:35:03.595159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f7cd1c23-03df-4a7c-bd0b-381c68c0d57e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B22841A90>]}
+[0m20:35:03.607245 [debug] [Thread-1 (]: Began running node model.grad_project.my_first_dbt_model
+[0m20:35:03.608233 [info ] [Thread-1 (]: 1 of 2 START sql table model SC1.my_first_dbt_model ............................ [RUN]
+[0m20:35:03.609606 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.my_first_dbt_model'
+[0m20:35:03.610346 [debug] [Thread-1 (]: Began compiling node model.grad_project.my_first_dbt_model
+[0m20:35:03.621296 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.my_first_dbt_model"
+[0m20:35:03.622952 [debug] [Thread-1 (]: Began executing node model.grad_project.my_first_dbt_model
+[0m20:35:03.659373 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.my_first_dbt_model"
+[0m20:35:03.662862 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.my_first_dbt_model"
+[0m20:35:03.663757 [debug] [Thread-1 (]: On model.grad_project.my_first_dbt_model: create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.my_first_dbt_model
+    
+    
+    
+    as (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.my_first_dbt_model"} */;
+[0m20:35:03.664921 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:35:06.501901 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.837 seconds
+[0m20:35:06.581716 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f7cd1c23-03df-4a7c-bd0b-381c68c0d57e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B21D7BE30>]}
+[0m20:35:06.584741 [info ] [Thread-1 (]: 1 of 2 OK created sql table model SC1.my_first_dbt_model ....................... [[32mSUCCESS 1[0m in 2.97s]
+[0m20:35:06.590439 [debug] [Thread-1 (]: Finished running node model.grad_project.my_first_dbt_model
+[0m20:35:06.595984 [debug] [Thread-2 (]: Began running node model.grad_project.my_second_dbt_model
+[0m20:35:06.597652 [info ] [Thread-2 (]: 2 of 2 START sql view model SC1.my_second_dbt_model ............................ [RUN]
+[0m20:35:06.605052 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.grad_project.my_second_dbt_model'
+[0m20:35:06.606732 [debug] [Thread-2 (]: Began compiling node model.grad_project.my_second_dbt_model
+[0m20:35:06.617880 [debug] [Thread-2 (]: Writing injected SQL for node "model.grad_project.my_second_dbt_model"
+[0m20:35:06.621417 [debug] [Thread-2 (]: Began executing node model.grad_project.my_second_dbt_model
+[0m20:35:06.682296 [debug] [Thread-2 (]: Writing runtime sql for node "model.grad_project.my_second_dbt_model"
+[0m20:35:06.685457 [debug] [Thread-2 (]: Using snowflake connection "model.grad_project.my_second_dbt_model"
+[0m20:35:06.686346 [debug] [Thread-2 (]: On model.grad_project.my_second_dbt_model: create or replace   view ANOMALY_DETECTION_SYSTEM.SC1.my_second_dbt_model
+  
+  
+  
+  
+  as (
+    -- Use the `ref` function to select from other models
+
+select *
+from ANOMALY_DETECTION_SYSTEM.SC1.my_first_dbt_model
+where id = 1
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.my_second_dbt_model"} */;
+[0m20:35:06.687337 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:35:07.679197 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.992 seconds
+[0m20:35:07.684119 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f7cd1c23-03df-4a7c-bd0b-381c68c0d57e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B22FA3A70>]}
+[0m20:35:07.685228 [info ] [Thread-2 (]: 2 of 2 OK created sql view model SC1.my_second_dbt_model ....................... [[32mSUCCESS 1[0m in 1.08s]
+[0m20:35:07.686712 [debug] [Thread-2 (]: Finished running node model.grad_project.my_second_dbt_model
+[0m20:35:07.689754 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:35:07.690468 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was left open.
+[0m20:35:07.691345 [debug] [MainThread]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m20:35:08.000553 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was left open.
+[0m20:35:08.001527 [debug] [MainThread]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m20:35:08.335416 [debug] [MainThread]: Connection 'model.grad_project.my_first_dbt_model' was left open.
+[0m20:35:08.337089 [debug] [MainThread]: On model.grad_project.my_first_dbt_model: Close
+[0m20:35:08.657590 [debug] [MainThread]: Connection 'model.grad_project.my_second_dbt_model' was left open.
+[0m20:35:08.659136 [debug] [MainThread]: On model.grad_project.my_second_dbt_model: Close
+[0m20:35:08.989306 [info ] [MainThread]: 
+[0m20:35:08.992028 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 9.19 seconds (9.19s).
+[0m20:35:08.995542 [debug] [MainThread]: Command end result
+[0m20:35:09.075917 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Mina Magdy\grad_project\target\manifest.json
+[0m20:35:09.083070 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Mina Magdy\grad_project\target\semantic_manifest.json
+[0m20:35:09.102453 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Mina Magdy\grad_project\target\run_results.json
+[0m20:35:09.103339 [info ] [MainThread]: 
+[0m20:35:09.107073 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:35:09.108479 [info ] [MainThread]: 
+[0m20:35:09.115389 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m20:35:09.118512 [debug] [MainThread]: Command `dbt run` succeeded at 20:35:09.118170 after 14.30 seconds
+[0m20:35:09.119985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B21D8E550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B21DA1350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029B1F9F44B0>]}
+[0m20:35:09.122059 [debug] [MainThread]: Flushing usage events
+[0m20:35:10.661280 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:40:56.934112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291B7B7A270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291B7760050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291B796E210>]}
+
+
+============================== 20:40:56.940865 | 0a5961d1-067c-4f42-9829-d519802aab1c ==============================
+[0m20:40:56.940865 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:40:56.941876 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'c:\\Users\\Mina Magdy\\grad_project\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:40:57.132540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0a5961d1-067c-4f42-9829-d519802aab1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291B95AA520>]}
+[0m20:40:57.163241 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:40:57.164321 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:40:57.165417 [debug] [MainThread]: Command `cli deps` succeeded at 20:40:57.165264 after 0.41 seconds
+[0m20:40:57.165803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291BA483AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291BA7A0160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291BA45A450>]}
+[0m20:40:57.166183 [debug] [MainThread]: Flushing usage events
+[0m19:43:32.803915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA65EDDE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA686C3C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA686C2E90>]}
+
+
+============================== 19:43:32.808596 | 99aa2ae8-7381-4698-94bf-7cac9cca214e ==============================
+[0m19:43:32.808596 [info ] [MainThread]: Running with dbt=1.8.0
+[0m19:43:32.809414 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:43:47.763653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '99aa2ae8-7381-4698-94bf-7cac9cca214e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA6CF0F360>]}
+[0m19:43:47.869306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '99aa2ae8-7381-4698-94bf-7cac9cca214e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA6CEF7350>]}
+[0m19:43:47.876250 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m19:43:48.846858 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m19:43:49.113321 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 7 files changed.
+[0m19:43:49.115028 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\schema.yml
+[0m19:43:49.116056 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\dim\dim_network.sql
+[0m19:43:49.116835 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\dim\dim_maintenance.sql
+[0m19:43:49.117603 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\dim\dim_date.sql
+[0m19:43:49.118410 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\fact\fct_cell_performance.sql
+[0m19:43:49.119189 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\staging\stg_full_telecom.sql
+[0m19:43:49.119981 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\dim\dim_tower.sql
+[0m19:43:49.688482 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m19:43:49.690364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '99aa2ae8-7381-4698-94bf-7cac9cca214e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA6D414350>]}
+[0m19:43:49.718812 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Invalid test config given in models\schema.yml:
+  	test arguments must be a dict, got <class 'str'> (value tower_id)
+  	@: UnparsedModelUpdate(original_file_path='mode...ne)
+[0m19:43:49.722805 [debug] [MainThread]: Command `dbt run` failed at 19:43:49.722455 after 17.04 seconds
+[0m19:43:49.723718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA6D399A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA6D3998B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA688B7E70>]}
+[0m19:43:49.724587 [debug] [MainThread]: Flushing usage events
+[0m19:45:23.790242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011645FDDE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000116487D3C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000116487D2E90>]}
+
+
+============================== 19:45:23.797237 | dbd034cb-bf3f-4e27-be9f-6c1d4ca70704 ==============================
+[0m19:45:23.797237 [info ] [MainThread]: Running with dbt=1.8.0
+[0m19:45:23.798539 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m19:45:24.888625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dbd034cb-bf3f-4e27-be9f-6c1d4ca70704', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001164D01F360>]}
+[0m19:45:24.945031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dbd034cb-bf3f-4e27-be9f-6c1d4ca70704', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001164D007350>]}
+[0m19:45:24.946452 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m19:45:25.184625 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m19:45:25.317783 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 7 files changed.
+[0m19:45:25.318893 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\schema.yml
+[0m19:45:25.319639 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\dim\dim_date.sql
+[0m19:45:25.320266 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\fact\fct_cell_performance.sql
+[0m19:45:25.320681 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\dim\dim_maintenance.sql
+[0m19:45:25.321071 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\dim\dim_tower.sql
+[0m19:45:25.321489 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\staging\stg_full_telecom.sql
+[0m19:45:25.322362 [debug] [MainThread]: Partial parsing: updated file: grad_project://models\marts\dim\dim_network.sql
+[0m19:45:25.584912 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m19:45:25.585719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'dbd034cb-bf3f-4e27-be9f-6c1d4ca70704', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001164D518250>]}
+[0m19:45:25.710674 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.grad_project.stg_full_telecom' (models\staging\stg_full_telecom.sql) depends on a source named 'telecom_raw.stg_full_telecom' which was not found
+[0m19:45:25.712200 [debug] [MainThread]: Command `dbt run` failed at 19:45:25.712021 after 2.05 seconds
+[0m19:45:25.712626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001164D482E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001164D4814F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000116489C7E70>]}
+[0m19:45:25.713126 [debug] [MainThread]: Flushing usage events
+[0m20:08:55.088272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F06B2ADE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F06DAA3C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F06DAA2E90>]}
+
+
+============================== 20:08:55.091464 | 7fc76de0-49d4-4cc0-88b1-92e60ceff077 ==============================
+[0m20:08:55.091464 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:08:55.092082 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt ls --resource-type source', 'send_anonymous_usage_stats': 'True'}
+[0m20:08:55.812575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7fc76de0-49d4-4cc0-88b1-92e60ceff077', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0722FF360>]}
+[0m20:08:55.848843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7fc76de0-49d4-4cc0-88b1-92e60ceff077', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0722E7460>]}
+[0m20:08:55.850191 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:08:55.993655 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m20:08:56.077194 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:08:56.077485 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:08:56.081126 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m20:08:56.108008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7fc76de0-49d4-4cc0-88b1-92e60ceff077', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F07254F050>]}
+[0m20:08:56.219885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7fc76de0-49d4-4cc0-88b1-92e60ceff077', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F07272AB70>]}
+[0m20:08:56.220256 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m20:08:56.220693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7fc76de0-49d4-4cc0-88b1-92e60ceff077', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F07272E6D0>]}
+[0m20:08:56.222511 [debug] [MainThread]: Command `dbt ls` succeeded at 20:08:56.222408 after 1.22 seconds
+[0m20:08:56.222779 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F0726FBC70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F06DB622D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F072723D10>]}
+[0m20:08:56.223016 [debug] [MainThread]: Flushing usage events
+[0m20:09:10.458748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D28A21E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2B203C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2B202E90>]}
+
+
+============================== 20:09:10.461725 | cbdb3768-0dde-43f1-8750-e21e443b95b8 ==============================
+[0m20:09:10.461725 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:09:10.462290 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:09:11.190840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cbdb3768-0dde-43f1-8750-e21e443b95b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2FA4F360>]}
+[0m20:09:11.226545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cbdb3768-0dde-43f1-8750-e21e443b95b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2FA37350>]}
+[0m20:09:11.227719 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:09:11.376674 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m20:09:11.463154 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:09:11.463467 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:09:11.467126 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m20:09:11.494083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cbdb3768-0dde-43f1-8750-e21e443b95b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2FC9B050>]}
+[0m20:09:11.563937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cbdb3768-0dde-43f1-8750-e21e443b95b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2FD31A90>]}
+[0m20:09:11.564308 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m20:09:11.564749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cbdb3768-0dde-43f1-8750-e21e443b95b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2FA075B0>]}
+[0m20:09:11.566085 [info ] [MainThread]: 
+[0m20:09:11.566738 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:09:11.570770 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m20:09:11.580966 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m20:09:11.581341 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m20:09:11.581559 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:15.515079 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 3.933 seconds
+[0m20:09:15.516205 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m20:09:15.799933 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m20:09:15.807166 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m20:09:15.807457 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m20:09:15.807690 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:16.566329 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.759 seconds
+[0m20:09:16.567880 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m20:09:16.891964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cbdb3768-0dde-43f1-8750-e21e443b95b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2FF8DB20>]}
+[0m20:09:16.892424 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:09:16.893163 [info ] [MainThread]: 
+[0m20:09:16.909299 [debug] [Thread-1 (]: Began running node model.grad_project.stg_full_telecom
+[0m20:09:16.910400 [info ] [Thread-1 (]: 1 of 6 START sql table model SC1.stg_full_telecom .............................. [RUN]
+[0m20:09:16.912630 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.stg_full_telecom'
+[0m20:09:16.912920 [debug] [Thread-1 (]: Began compiling node model.grad_project.stg_full_telecom
+[0m20:09:16.920376 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.stg_full_telecom"
+[0m20:09:16.921884 [debug] [Thread-1 (]: Began executing node model.grad_project.stg_full_telecom
+[0m20:09:16.950283 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.stg_full_telecom"
+[0m20:09:16.952015 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.stg_full_telecom"
+[0m20:09:16.952337 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.stg_full_telecom"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+         as
+        (
+
+with raw as (
+    select * from ANOMALY_DETECTION_SYSTEM.SC1.STG_FULL_TELECOM
+)
+
+select
+    id,
+    radio,
+    mcc,
+    mnc,
+    tac,
+    cid,
+    lon,
+    lat,
+    range as range_m,
+    sam,
+    country,
+    network as network_name,
+    drop_calls,
+    total_calls,
+    drop_rate,
+    avg_load,
+    signal_strength,
+    speed,
+    latency,
+    qoe,
+    coverage_gap,
+    signal_quality,
+    tower_status,
+    priority,
+    maintenance_type,
+    to_timestamp(created_dt)       as created_dt,
+    to_timestamp(updated_dt)       as updated_dt,
+    to_timestamp(maintenance_date) as maintenance_date,
+    labor_cost_egp,
+    parts_cost_egp,
+    downtime_hours,
+    vendor,
+    notes
+from raw;
+[0m20:09:16.952592 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:09:17.924648 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c0da21-0000-c7e2-0001-489a0001fe66
+[0m20:09:17.925009 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 43 at position 8 unexpected ';'.
+[0m20:09:17.925340 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: Close
+[0m20:09:18.256227 [debug] [Thread-1 (]: Database Error in model stg_full_telecom (models\staging\stg_full_telecom.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 43 at position 8 unexpected ';'.
+  compiled code at target\run\grad_project\models\staging\stg_full_telecom.sql
+[0m20:09:18.257326 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cbdb3768-0dde-43f1-8750-e21e443b95b8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D3053A690>]}
+[0m20:09:18.257775 [error] [Thread-1 (]: 1 of 6 ERROR creating sql table model SC1.stg_full_telecom ..................... [[31mERROR[0m in 1.34s]
+[0m20:09:18.258784 [debug] [Thread-1 (]: Finished running node model.grad_project.stg_full_telecom
+[0m20:09:18.260065 [debug] [Thread-1 (]: Began running node model.grad_project.dim_tower
+[0m20:09:18.260854 [debug] [Thread-4 (]: Began running node model.grad_project.dim_network
+[0m20:09:18.261523 [debug] [Thread-3 (]: Began running node model.grad_project.dim_maintenance
+[0m20:09:18.260452 [info ] [Thread-1 (]: 5 of 6 SKIP relation SC1.dim_tower ............................................. [[33mSKIP[0m]
+[0m20:09:18.262387 [debug] [Thread-1 (]: Finished running node model.grad_project.dim_tower
+[0m20:09:18.261198 [info ] [Thread-4 (]: 4 of 6 SKIP relation SC1.dim_network ........................................... [[33mSKIP[0m]
+[0m20:09:18.263005 [debug] [Thread-4 (]: Finished running node model.grad_project.dim_network
+[0m20:09:18.263487 [debug] [Thread-2 (]: Began running node model.grad_project.dim_date
+[0m20:09:18.261831 [info ] [Thread-3 (]: 3 of 6 SKIP relation SC1.dim_maintenance ....................................... [[33mSKIP[0m]
+[0m20:09:18.264668 [debug] [Thread-3 (]: Finished running node model.grad_project.dim_maintenance
+[0m20:09:18.264066 [info ] [Thread-2 (]: 2 of 6 SKIP relation SC1.dim_date .............................................. [[33mSKIP[0m]
+[0m20:09:18.265430 [debug] [Thread-1 (]: Began running node model.grad_project.fct_cell_performance
+[0m20:09:18.265926 [debug] [Thread-2 (]: Finished running node model.grad_project.dim_date
+[0m20:09:18.266260 [info ] [Thread-1 (]: 6 of 6 SKIP relation SC1.fct_cell_performance .................................. [[33mSKIP[0m]
+[0m20:09:18.266972 [debug] [Thread-1 (]: Finished running node model.grad_project.fct_cell_performance
+[0m20:09:18.268304 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:09:18.268524 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was properly closed.
+[0m20:09:18.268778 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was properly closed.
+[0m20:09:18.269083 [debug] [MainThread]: Connection 'model.grad_project.stg_full_telecom' was properly closed.
+[0m20:09:18.269545 [info ] [MainThread]: 
+[0m20:09:18.270009 [info ] [MainThread]: Finished running 5 table models, 1 incremental model in 0 hours 0 minutes and 6.70 seconds (6.70s).
+[0m20:09:18.270842 [debug] [MainThread]: Command end result
+[0m20:09:18.292697 [info ] [MainThread]: 
+[0m20:09:18.293430 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:09:18.293906 [info ] [MainThread]: 
+[0m20:09:18.294403 [error] [MainThread]:   Database Error in model stg_full_telecom (models\staging\stg_full_telecom.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 43 at position 8 unexpected ';'.
+  compiled code at target\run\grad_project\models\staging\stg_full_telecom.sql
+[0m20:09:18.294811 [info ] [MainThread]: 
+[0m20:09:18.295248 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=5 TOTAL=6
+[0m20:09:18.296035 [debug] [MainThread]: Command `dbt run` failed at 20:09:18.295947 after 7.93 seconds
+[0m20:09:18.296313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D30B30310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D30BE62B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D30BE5D10>]}
+[0m20:09:18.296572 [debug] [MainThread]: Flushing usage events
+[0m20:09:27.354595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257CB99DE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257CE183C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257CE182E90>]}
+
+
+============================== 20:09:27.357790 | b775acd7-63de-4c61-b1eb-2fd061815de9 ==============================
+[0m20:09:27.357790 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:09:27.358341 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:09:28.089604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b775acd7-63de-4c61-b1eb-2fd061815de9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D29CF360>]}
+[0m20:09:28.125772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b775acd7-63de-4c61-b1eb-2fd061815de9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D29B7350>]}
+[0m20:09:28.126817 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:09:28.278835 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m20:09:28.365731 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:09:28.366026 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:09:28.369659 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m20:09:28.395691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b775acd7-63de-4c61-b1eb-2fd061815de9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D2C1B050>]}
+[0m20:09:28.464336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b775acd7-63de-4c61-b1eb-2fd061815de9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D2CB5A90>]}
+[0m20:09:28.464736 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m20:09:28.465285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b775acd7-63de-4c61-b1eb-2fd061815de9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D29875B0>]}
+[0m20:09:28.466630 [info ] [MainThread]: 
+[0m20:09:28.467186 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:09:28.471125 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m20:09:28.481243 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m20:09:28.481560 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m20:09:28.481790 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:29.980312 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.498 seconds
+[0m20:09:29.981472 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m20:09:30.271236 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m20:09:30.277193 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m20:09:30.277435 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m20:09:30.277638 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:31.062827 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.785 seconds
+[0m20:09:31.064270 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m20:09:31.369585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b775acd7-63de-4c61-b1eb-2fd061815de9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D2E2BA00>]}
+[0m20:09:31.370029 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:09:31.370407 [info ] [MainThread]: 
+[0m20:09:31.372794 [debug] [Thread-1 (]: Began running node model.grad_project.stg_full_telecom
+[0m20:09:31.373205 [info ] [Thread-1 (]: 1 of 6 START sql table model SC1.stg_full_telecom .............................. [RUN]
+[0m20:09:31.373734 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.stg_full_telecom'
+[0m20:09:31.374007 [debug] [Thread-1 (]: Began compiling node model.grad_project.stg_full_telecom
+[0m20:09:31.378994 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.stg_full_telecom"
+[0m20:09:31.379680 [debug] [Thread-1 (]: Began executing node model.grad_project.stg_full_telecom
+[0m20:09:31.400577 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.stg_full_telecom"
+[0m20:09:31.402096 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.stg_full_telecom"
+[0m20:09:31.402427 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.stg_full_telecom"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+         as
+        (
+
+with raw as (
+    select * from ANOMALY_DETECTION_SYSTEM.SC1.STG_FULL_TELECOM
+)
+
+select
+    id,
+    radio,
+    mcc,
+    mnc,
+    tac,
+    cid,
+    lon,
+    lat,
+    range as range_m,
+    sam,
+    country,
+    network as network_name,
+    drop_calls,
+    total_calls,
+    drop_rate,
+    avg_load,
+    signal_strength,
+    speed,
+    latency,
+    qoe,
+    coverage_gap,
+    signal_quality,
+    tower_status,
+    priority,
+    maintenance_type,
+    to_timestamp(created_dt)       as created_dt,
+    to_timestamp(updated_dt)       as updated_dt,
+    to_timestamp(maintenance_date) as maintenance_date,
+    labor_cost_egp,
+    parts_cost_egp,
+    downtime_hours,
+    vendor,
+    notes
+from raw;
+[0m20:09:31.402681 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:09:32.147722 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c0da21-0000-c7e2-0001-489a0001fe72
+[0m20:09:32.148094 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 43 at position 8 unexpected ';'.
+[0m20:09:32.148418 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: Close
+[0m20:09:32.439704 [debug] [Thread-1 (]: Database Error in model stg_full_telecom (models\staging\stg_full_telecom.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 43 at position 8 unexpected ';'.
+  compiled code at target\run\grad_project\models\staging\stg_full_telecom.sql
+[0m20:09:32.440765 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b775acd7-63de-4c61-b1eb-2fd061815de9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D34B9CD0>]}
+[0m20:09:32.441215 [error] [Thread-1 (]: 1 of 6 ERROR creating sql table model SC1.stg_full_telecom ..................... [[31mERROR[0m in 1.07s]
+[0m20:09:32.442211 [debug] [Thread-1 (]: Finished running node model.grad_project.stg_full_telecom
+[0m20:09:32.443212 [debug] [Thread-2 (]: Began running node model.grad_project.dim_date
+[0m20:09:32.443480 [debug] [Thread-1 (]: Began running node model.grad_project.dim_tower
+[0m20:09:32.444164 [debug] [Thread-3 (]: Began running node model.grad_project.dim_maintenance
+[0m20:09:32.444583 [debug] [Thread-4 (]: Began running node model.grad_project.dim_network
+[0m20:09:32.443753 [info ] [Thread-2 (]: 2 of 6 SKIP relation SC1.dim_date .............................................. [[33mSKIP[0m]
+[0m20:09:32.445678 [debug] [Thread-2 (]: Finished running node model.grad_project.dim_date
+[0m20:09:32.443965 [info ] [Thread-1 (]: 5 of 6 SKIP relation SC1.dim_tower ............................................. [[33mSKIP[0m]
+[0m20:09:32.446315 [debug] [Thread-1 (]: Finished running node model.grad_project.dim_tower
+[0m20:09:32.444398 [info ] [Thread-3 (]: 3 of 6 SKIP relation SC1.dim_maintenance ....................................... [[33mSKIP[0m]
+[0m20:09:32.447296 [debug] [Thread-3 (]: Finished running node model.grad_project.dim_maintenance
+[0m20:09:32.444809 [info ] [Thread-4 (]: 4 of 6 SKIP relation SC1.dim_network ........................................... [[33mSKIP[0m]
+[0m20:09:32.447993 [debug] [Thread-4 (]: Finished running node model.grad_project.dim_network
+[0m20:09:32.449011 [debug] [Thread-2 (]: Began running node model.grad_project.fct_cell_performance
+[0m20:09:32.449561 [info ] [Thread-2 (]: 6 of 6 SKIP relation SC1.fct_cell_performance .................................. [[33mSKIP[0m]
+[0m20:09:32.450470 [debug] [Thread-2 (]: Finished running node model.grad_project.fct_cell_performance
+[0m20:09:32.452298 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:09:32.452573 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was properly closed.
+[0m20:09:32.452758 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was properly closed.
+[0m20:09:32.452922 [debug] [MainThread]: Connection 'model.grad_project.stg_full_telecom' was properly closed.
+[0m20:09:32.453170 [info ] [MainThread]: 
+[0m20:09:32.453584 [info ] [MainThread]: Finished running 5 table models, 1 incremental model in 0 hours 0 minutes and 3.99 seconds (3.99s).
+[0m20:09:32.454395 [debug] [MainThread]: Command end result
+[0m20:09:32.475805 [info ] [MainThread]: 
+[0m20:09:32.476411 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:09:32.477039 [info ] [MainThread]: 
+[0m20:09:32.477452 [error] [MainThread]:   Database Error in model stg_full_telecom (models\staging\stg_full_telecom.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 43 at position 8 unexpected ';'.
+  compiled code at target\run\grad_project\models\staging\stg_full_telecom.sql
+[0m20:09:32.477951 [info ] [MainThread]: 
+[0m20:09:32.478442 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=5 TOTAL=6
+[0m20:09:32.479374 [debug] [MainThread]: Command `dbt run` failed at 20:09:32.479275 after 5.21 seconds
+[0m20:09:32.479667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D2E168E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D3B76C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000257D3B76850>]}
+[0m20:09:32.479935 [debug] [MainThread]: Flushing usage events
+[0m20:09:34.769925 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002344A31DE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002344CB03C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002344CB02E90>]}
+
+
+============================== 20:09:34.773199 | 9a7e34bf-7dcf-4434-b4db-c5411a06d645 ==============================
+[0m20:09:34.773199 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:09:34.773959 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:09:35.487387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9a7e34bf-7dcf-4434-b4db-c5411a06d645', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002345135F360>]}
+[0m20:09:35.529957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9a7e34bf-7dcf-4434-b4db-c5411a06d645', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023451347350>]}
+[0m20:09:35.530908 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:09:35.678947 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m20:09:35.763533 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:09:35.763829 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:09:35.767451 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m20:09:35.792726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9a7e34bf-7dcf-4434-b4db-c5411a06d645', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234515AB050>]}
+[0m20:09:35.864812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9a7e34bf-7dcf-4434-b4db-c5411a06d645', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023451641A90>]}
+[0m20:09:35.865199 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m20:09:35.865735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9a7e34bf-7dcf-4434-b4db-c5411a06d645', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234513175B0>]}
+[0m20:09:35.867054 [info ] [MainThread]: 
+[0m20:09:35.867651 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:09:35.871428 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m20:09:35.881072 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m20:09:35.881375 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m20:09:35.881601 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:36.836966 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.955 seconds
+[0m20:09:36.838117 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m20:09:37.141913 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m20:09:37.148183 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m20:09:37.148472 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m20:09:37.148800 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:38.289896 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.141 seconds
+[0m20:09:38.291435 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m20:09:38.583281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9a7e34bf-7dcf-4434-b4db-c5411a06d645', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002345189C870>]}
+[0m20:09:38.583734 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:09:38.584270 [info ] [MainThread]: 
+[0m20:09:38.588467 [debug] [Thread-1 (]: Began running node model.grad_project.stg_full_telecom
+[0m20:09:38.588831 [info ] [Thread-1 (]: 1 of 6 START sql table model SC1.stg_full_telecom .............................. [RUN]
+[0m20:09:38.589456 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.stg_full_telecom'
+[0m20:09:38.589720 [debug] [Thread-1 (]: Began compiling node model.grad_project.stg_full_telecom
+[0m20:09:38.595110 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.stg_full_telecom"
+[0m20:09:38.595864 [debug] [Thread-1 (]: Began executing node model.grad_project.stg_full_telecom
+[0m20:09:38.618078 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.stg_full_telecom"
+[0m20:09:38.619366 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.stg_full_telecom"
+[0m20:09:38.619667 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.stg_full_telecom"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+         as
+        (
+
+with raw as (
+    select * from ANOMALY_DETECTION_SYSTEM.SC1.STG_FULL_TELECOM
+)
+
+select
+    id,
+    radio,
+    mcc,
+    mnc,
+    tac,
+    cid,
+    lon,
+    lat,
+    range as range_m,
+    sam,
+    country,
+    network as network_name,
+    drop_calls,
+    total_calls,
+    drop_rate,
+    avg_load,
+    signal_strength,
+    speed,
+    latency,
+    qoe,
+    coverage_gap,
+    signal_quality,
+    tower_status,
+    priority,
+    maintenance_type,
+    to_timestamp(created_dt)       as created_dt,
+    to_timestamp(updated_dt)       as updated_dt,
+    to_timestamp(maintenance_date) as maintenance_date,
+    labor_cost_egp,
+    parts_cost_egp,
+    downtime_hours,
+    vendor,
+    notes
+from raw;
+[0m20:09:38.619942 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:09:39.347044 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c0da21-0000-c7e2-0001-489a0001fe7e
+[0m20:09:39.347412 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 43 at position 8 unexpected ';'.
+[0m20:09:39.347726 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: Close
+[0m20:09:39.873489 [debug] [Thread-1 (]: Database Error in model stg_full_telecom (models\staging\stg_full_telecom.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 43 at position 8 unexpected ';'.
+  compiled code at target\run\grad_project\models\staging\stg_full_telecom.sql
+[0m20:09:39.874738 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9a7e34bf-7dcf-4434-b4db-c5411a06d645', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234518DBD10>]}
+[0m20:09:39.875319 [error] [Thread-1 (]: 1 of 6 ERROR creating sql table model SC1.stg_full_telecom ..................... [[31mERROR[0m in 1.28s]
+[0m20:09:39.875953 [debug] [Thread-1 (]: Finished running node model.grad_project.stg_full_telecom
+[0m20:09:39.877216 [debug] [Thread-2 (]: Began running node model.grad_project.dim_date
+[0m20:09:39.877948 [debug] [Thread-1 (]: Began running node model.grad_project.dim_tower
+[0m20:09:39.878293 [debug] [Thread-4 (]: Began running node model.grad_project.dim_network
+[0m20:09:39.878639 [debug] [Thread-3 (]: Began running node model.grad_project.dim_maintenance
+[0m20:09:39.877628 [info ] [Thread-2 (]: 2 of 6 SKIP relation SC1.dim_date .............................................. [[33mSKIP[0m]
+[0m20:09:39.879104 [info ] [Thread-1 (]: 5 of 6 SKIP relation SC1.dim_tower ............................................. [[33mSKIP[0m]
+[0m20:09:39.880205 [debug] [Thread-2 (]: Finished running node model.grad_project.dim_date
+[0m20:09:39.880521 [debug] [Thread-1 (]: Finished running node model.grad_project.dim_tower
+[0m20:09:39.879448 [info ] [Thread-4 (]: 4 of 6 SKIP relation SC1.dim_network ........................................... [[33mSKIP[0m]
+[0m20:09:39.881176 [debug] [Thread-4 (]: Finished running node model.grad_project.dim_network
+[0m20:09:39.879745 [info ] [Thread-3 (]: 3 of 6 SKIP relation SC1.dim_maintenance ....................................... [[33mSKIP[0m]
+[0m20:09:39.881736 [debug] [Thread-3 (]: Finished running node model.grad_project.dim_maintenance
+[0m20:09:39.882252 [debug] [Thread-2 (]: Began running node model.grad_project.fct_cell_performance
+[0m20:09:39.882548 [info ] [Thread-2 (]: 6 of 6 SKIP relation SC1.fct_cell_performance .................................. [[33mSKIP[0m]
+[0m20:09:39.882935 [debug] [Thread-2 (]: Finished running node model.grad_project.fct_cell_performance
+[0m20:09:39.884119 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:09:39.884468 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was properly closed.
+[0m20:09:39.884693 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was properly closed.
+[0m20:09:39.884872 [debug] [MainThread]: Connection 'model.grad_project.stg_full_telecom' was properly closed.
+[0m20:09:39.885121 [info ] [MainThread]: 
+[0m20:09:39.885460 [info ] [MainThread]: Finished running 5 table models, 1 incremental model in 0 hours 0 minutes and 4.02 seconds (4.02s).
+[0m20:09:39.886329 [debug] [MainThread]: Command end result
+[0m20:09:39.907624 [info ] [MainThread]: 
+[0m20:09:39.908192 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:09:39.908580 [info ] [MainThread]: 
+[0m20:09:39.908947 [error] [MainThread]:   Database Error in model stg_full_telecom (models\staging\stg_full_telecom.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 43 at position 8 unexpected ';'.
+  compiled code at target\run\grad_project\models\staging\stg_full_telecom.sql
+[0m20:09:39.909252 [info ] [MainThread]: 
+[0m20:09:39.909548 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=5 TOTAL=6
+[0m20:09:39.910265 [debug] [MainThread]: Command `dbt run` failed at 20:09:39.910168 after 5.23 seconds
+[0m20:09:39.910567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234517A68E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234525D6670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234525D5810>]}
+[0m20:09:39.910847 [debug] [MainThread]: Flushing usage events
+[0m20:12:53.837097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DF820DE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFAA03C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFAA02E90>]}
+
+
+============================== 20:12:53.841640 | 0b8b9f04-f35d-40c4-993f-c9516bfd4d59 ==============================
+[0m20:12:53.841640 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:12:53.842551 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select stg_full_telecom', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:12:54.912235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0b8b9f04-f35d-40c4-993f-c9516bfd4d59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFF24B360>]}
+[0m20:12:54.971651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0b8b9f04-f35d-40c4-993f-c9516bfd4d59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFF237350>]}
+[0m20:12:54.973282 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:12:55.195536 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m20:12:55.321933 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:12:55.322368 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:12:55.327964 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m20:12:55.368470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0b8b9f04-f35d-40c4-993f-c9516bfd4d59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFF49B050>]}
+[0m20:12:55.474524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0b8b9f04-f35d-40c4-993f-c9516bfd4d59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFF531A90>]}
+[0m20:12:55.475035 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m20:12:55.475722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b8b9f04-f35d-40c4-993f-c9516bfd4d59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFF2035B0>]}
+[0m20:12:55.477399 [info ] [MainThread]: 
+[0m20:12:55.478242 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:12:55.479444 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m20:12:55.494505 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m20:12:55.494947 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m20:12:55.495258 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:12:57.421491 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.926 seconds
+[0m20:12:57.424216 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m20:12:57.750374 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m20:12:57.765600 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m20:12:57.766220 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m20:12:57.766695 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:12:58.599243 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.832 seconds
+[0m20:12:58.602462 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m20:12:58.926720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b8b9f04-f35d-40c4-993f-c9516bfd4d59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFFCE3E10>]}
+[0m20:12:58.927480 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:12:58.928185 [info ] [MainThread]: 
+[0m20:12:58.933054 [debug] [Thread-1 (]: Began running node model.grad_project.stg_full_telecom
+[0m20:12:58.933984 [info ] [Thread-1 (]: 1 of 1 START sql table model SC1.stg_full_telecom .............................. [RUN]
+[0m20:12:58.934723 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.stg_full_telecom'
+[0m20:12:58.935113 [debug] [Thread-1 (]: Began compiling node model.grad_project.stg_full_telecom
+[0m20:12:58.944738 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.stg_full_telecom"
+[0m20:12:58.947574 [debug] [Thread-1 (]: Began executing node model.grad_project.stg_full_telecom
+[0m20:12:58.979335 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.stg_full_telecom"
+[0m20:12:58.981559 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.stg_full_telecom"
+[0m20:12:58.982075 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.stg_full_telecom"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+         as
+        (
+
+with raw as (
+
+    select * from ANOMALY_DETECTION_SYSTEM.SC1.STG_FULL_TELECOM
+
+)
+
+select
+    id,
+    radio,
+    mcc,
+    mnc,
+    tac,
+    cid,
+    lon,
+    lat,
+    range        as range_m,
+    sam,
+    created,
+    updated,
+    country,
+    network      as network_name,
+    drop_calls,
+    total_calls,
+    /* توحيد drop_rate لو هي 0–100 نخليها 0–1 */
+    case
+        when drop_rate is null then null
+        when drop_rate > 1 and drop_rate <= 100 then drop_rate / 100.0
+        else drop_rate
+    end          as drop_rate,
+    avg_load,
+    signal_strength,
+    speed,
+    latency,
+    qoe          as QoE,
+    iif(coverage_gap::boolean, true, false) as coverage_gap,
+    signal_quality,
+    tower_status,
+    priority,
+    maintenance_type,
+    to_timestamp(created_dt)       as created_dt,
+    to_timestamp(updated_dt)       as updated_dt,
+    to_timestamp(maintenance_date) as maintenance_date,
+    labor_cost_egp,
+    parts_cost_egp,
+    downtime_hours,
+    vendor,
+    notes
+from raw
+        );
+[0m20:12:58.982490 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:12:59.904203 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c0da25-0000-c7e2-0001-489a0001fede
+[0m20:12:59.905123 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002140 (42601): SQL compilation error:
+Unknown function IIF
+[0m20:12:59.906150 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: Close
+[0m20:13:00.211373 [debug] [Thread-1 (]: Database Error in model stg_full_telecom (models\staging\stg_full_telecom.sql)
+  002140 (42601): SQL compilation error:
+  Unknown function IIF
+  compiled code at target\run\grad_project\models\staging\stg_full_telecom.sql
+[0m20:13:00.213698 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0b8b9f04-f35d-40c4-993f-c9516bfd4d59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFFD38350>]}
+[0m20:13:00.214807 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model SC1.stg_full_telecom ..................... [[31mERROR[0m in 1.28s]
+[0m20:13:00.215996 [debug] [Thread-1 (]: Finished running node model.grad_project.stg_full_telecom
+[0m20:13:00.218756 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:13:00.219184 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was properly closed.
+[0m20:13:00.219524 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was properly closed.
+[0m20:13:00.219852 [debug] [MainThread]: Connection 'model.grad_project.stg_full_telecom' was properly closed.
+[0m20:13:00.220269 [info ] [MainThread]: 
+[0m20:13:00.221111 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.74 seconds (4.74s).
+[0m20:13:00.222340 [debug] [MainThread]: Command end result
+[0m20:13:00.255222 [info ] [MainThread]: 
+[0m20:13:00.255943 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:13:00.256574 [info ] [MainThread]: 
+[0m20:13:00.257269 [error] [MainThread]:   Database Error in model stg_full_telecom (models\staging\stg_full_telecom.sql)
+  002140 (42601): SQL compilation error:
+  Unknown function IIF
+  compiled code at target\run\grad_project\models\staging\stg_full_telecom.sql
+[0m20:13:00.257819 [info ] [MainThread]: 
+[0m20:13:00.258316 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m20:13:00.259428 [debug] [MainThread]: Command `dbt run` failed at 20:13:00.259298 after 6.59 seconds
+[0m20:13:00.259820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D8040B330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D8040FC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021D8040FA70>]}
+[0m20:13:00.260186 [debug] [MainThread]: Flushing usage events
+[0m20:51:29.996936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018270EDDE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182736C3C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182736C2E90>]}
+
+
+============================== 20:51:30.000062 | c2c6acd3-167f-42f5-a094-8a3ea359216a ==============================
+[0m20:51:30.000062 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:51:30.000633 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select stg_full_telecom', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:51:30.725757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c2c6acd3-167f-42f5-a094-8a3ea359216a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018277F1F360>]}
+[0m20:51:30.762335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c2c6acd3-167f-42f5-a094-8a3ea359216a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018277F07350>]}
+[0m20:51:30.763616 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:51:30.908047 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m20:51:30.993297 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:51:30.993604 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:51:30.997264 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m20:51:31.022929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c2c6acd3-167f-42f5-a094-8a3ea359216a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001827816B050>]}
+[0m20:51:31.094363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c2c6acd3-167f-42f5-a094-8a3ea359216a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018278201A90>]}
+[0m20:51:31.094743 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m20:51:31.095226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c2c6acd3-167f-42f5-a094-8a3ea359216a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018277ED35B0>]}
+[0m20:51:31.096329 [info ] [MainThread]: 
+[0m20:51:31.096847 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:51:31.097685 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m20:51:31.107602 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m20:51:31.107855 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m20:51:31.108057 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:51:32.946248 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.838 seconds
+[0m20:51:32.947460 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m20:51:33.257514 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m20:51:33.263661 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m20:51:33.263972 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m20:51:33.264175 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:51:34.241860 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.977 seconds
+[0m20:51:34.246575 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m20:51:34.601390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c2c6acd3-167f-42f5-a094-8a3ea359216a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018278458530>]}
+[0m20:51:34.602416 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:51:34.603598 [info ] [MainThread]: 
+[0m20:51:34.608900 [debug] [Thread-1 (]: Began running node model.grad_project.stg_full_telecom
+[0m20:51:34.609628 [info ] [Thread-1 (]: 1 of 1 START sql table model SC1.stg_full_telecom .............................. [RUN]
+[0m20:51:34.610932 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.stg_full_telecom'
+[0m20:51:34.611649 [debug] [Thread-1 (]: Began compiling node model.grad_project.stg_full_telecom
+[0m20:51:34.620959 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.stg_full_telecom"
+[0m20:51:34.622965 [debug] [Thread-1 (]: Began executing node model.grad_project.stg_full_telecom
+[0m20:51:34.657115 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.stg_full_telecom"
+[0m20:51:34.659485 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.stg_full_telecom"
+[0m20:51:34.659998 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.stg_full_telecom"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+         as
+        (
+
+with raw as (
+
+    select
+        ID,
+        radio,
+        MCC,
+        MNC,
+        TAC,
+        CID,
+        LON,
+        LAT,
+        RANGE,
+        SAM,
+        created,
+        updated,
+        Country,
+        Network,
+        drop_calls,
+        total_calls,
+        drop_rate,
+        avg_load,
+        signal_strength,
+        speed,
+        latency,
+        QoE,
+        coverage_gap,
+        signal_quality,
+        tower_status,
+        priority,
+        maintenance_type,
+        created_dt,
+        updated_dt,
+        maintenance_date,
+        labor_cost_egp,
+        parts_cost_egp,
+        downtime_hours,
+        vendor,
+        notes
+    from ANOMALY_DETECTION_SYSTEM.SC1.STG_FULL_TELECOM
+
+)
+
+select
+    id,
+    radio,
+    mcc,
+    mnc,
+    tac,
+    cid,
+    lon,
+    lat,
+    range       as range_m,
+    sam,
+    country,
+    network     as network_name,
+    drop_calls,
+    total_calls,
+    case
+        when drop_rate is null then null
+        when drop_rate > 1 and drop_rate <= 100 then drop_rate/100.0
+        else drop_rate
+    end         as drop_rate,
+    avg_load,
+    signal_strength,
+    speed,
+    latency,
+    QoE,
+    IFF(coverage_gap::BOOLEAN, TRUE, FALSE) AS coverage_gap,
+    signal_quality,
+    tower_status,
+    priority,
+    maintenance_type,
+    TO_TIMESTAMP(created_dt)       as created_dt,
+    TO_TIMESTAMP(updated_dt)       as updated_dt,
+    TO_TIMESTAMP(maintenance_date) as maintenance_date,
+    labor_cost_egp,
+    parts_cost_egp,
+    downtime_hours,
+    vendor,
+    notes
+from raw
+        );
+[0m20:51:34.660489 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:51:39.408767 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 4.748 seconds
+[0m20:51:39.441141 [debug] [Thread-1 (]: On model.grad_project.stg_full_telecom: Close
+[0m20:51:39.739567 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c2c6acd3-167f-42f5-a094-8a3ea359216a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018278494A10>]}
+[0m20:51:39.740671 [info ] [Thread-1 (]: 1 of 1 OK created sql table model SC1.stg_full_telecom ......................... [[32mSUCCESS 1[0m in 5.13s]
+[0m20:51:39.742327 [debug] [Thread-1 (]: Finished running node model.grad_project.stg_full_telecom
+[0m20:51:39.744832 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:51:39.745311 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was properly closed.
+[0m20:51:39.745681 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was properly closed.
+[0m20:51:39.746013 [debug] [MainThread]: Connection 'model.grad_project.stg_full_telecom' was properly closed.
+[0m20:51:39.746404 [info ] [MainThread]: 
+[0m20:51:39.747202 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 8.65 seconds (8.65s).
+[0m20:51:39.748633 [debug] [MainThread]: Command end result
+[0m20:51:39.785048 [info ] [MainThread]: 
+[0m20:51:39.785795 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:51:39.786496 [info ] [MainThread]: 
+[0m20:51:39.787137 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:51:39.788189 [debug] [MainThread]: Command `dbt run` succeeded at 20:51:39.788057 after 9.87 seconds
+[0m20:51:39.788570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018279083EE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182791AA350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182791A9130>]}
+[0m20:51:39.788934 [debug] [MainThread]: Flushing usage events
+[0m20:54:10.664192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE1086DE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE13063C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE13062E90>]}
+
+
+============================== 20:54:10.671260 | 7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392 ==============================
+[0m20:54:10.671260 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:54:10.672400 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --models dim_tower dim_network dim_maintenance dim_date', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:54:11.765316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE1789F360>]}
+[0m20:54:11.820723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE17887350>]}
+[0m20:54:11.822141 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:54:12.043961 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m20:54:12.176776 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:54:12.177212 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:54:12.182786 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m20:54:12.220534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE17AEB050>]}
+[0m20:54:12.328209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE17B81A90>]}
+[0m20:54:12.328773 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m20:54:12.329434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE178575B0>]}
+[0m20:54:12.331718 [info ] [MainThread]: 
+[0m20:54:12.332524 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:54:12.337962 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m20:54:12.354083 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m20:54:12.354571 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m20:54:12.354911 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:54:14.101636 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.746 seconds
+[0m20:54:14.105215 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m20:54:14.404619 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m20:54:14.419288 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m20:54:14.419900 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m20:54:14.420413 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:54:15.273531 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.853 seconds
+[0m20:54:15.277872 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m20:54:15.613622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE17CFFA00>]}
+[0m20:54:15.614686 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:54:15.616363 [info ] [MainThread]: 
+[0m20:54:15.623086 [debug] [Thread-1 (]: Began running node model.grad_project.dim_date
+[0m20:54:15.624513 [debug] [Thread-3 (]: Began running node model.grad_project.dim_network
+[0m20:54:15.626151 [debug] [Thread-2 (]: Began running node model.grad_project.dim_maintenance
+[0m20:54:15.628447 [debug] [Thread-4 (]: Began running node model.grad_project.dim_tower
+[0m20:54:15.623950 [info ] [Thread-1 (]: 1 of 4 START sql table model SC1.dim_date ...................................... [RUN]
+[0m20:54:15.630807 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.dim_date'
+[0m20:54:15.631451 [debug] [Thread-1 (]: Began compiling node model.grad_project.dim_date
+[0m20:54:15.625311 [info ] [Thread-3 (]: 3 of 4 START sql table model SC1.dim_network ................................... [RUN]
+[0m20:54:15.643489 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.dim_date"
+[0m20:54:15.644430 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.grad_project.dim_network'
+[0m20:54:15.627640 [info ] [Thread-2 (]: 2 of 4 START sql table model SC1.dim_maintenance ............................... [RUN]
+[0m20:54:15.629740 [info ] [Thread-4 (]: 4 of 4 START sql table model SC1.dim_tower ..................................... [RUN]
+[0m20:54:15.646883 [debug] [Thread-3 (]: Began compiling node model.grad_project.dim_network
+[0m20:54:15.647668 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.grad_project.dim_maintenance'
+[0m20:54:15.648506 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.grad_project.dim_tower'
+[0m20:54:15.652649 [debug] [Thread-3 (]: Writing injected SQL for node "model.grad_project.dim_network"
+[0m20:54:15.653240 [debug] [Thread-1 (]: Began executing node model.grad_project.dim_date
+[0m20:54:15.653676 [debug] [Thread-2 (]: Began compiling node model.grad_project.dim_maintenance
+[0m20:54:15.654125 [debug] [Thread-4 (]: Began compiling node model.grad_project.dim_tower
+[0m20:54:15.681423 [debug] [Thread-2 (]: Writing injected SQL for node "model.grad_project.dim_maintenance"
+[0m20:54:15.689890 [debug] [Thread-4 (]: Writing injected SQL for node "model.grad_project.dim_tower"
+[0m20:54:15.703215 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.dim_date"
+[0m20:54:15.704177 [debug] [Thread-3 (]: Began executing node model.grad_project.dim_network
+[0m20:54:15.708164 [debug] [Thread-3 (]: Writing runtime sql for node "model.grad_project.dim_network"
+[0m20:54:15.709350 [debug] [Thread-2 (]: Began executing node model.grad_project.dim_maintenance
+[0m20:54:15.712149 [debug] [Thread-2 (]: Writing runtime sql for node "model.grad_project.dim_maintenance"
+[0m20:54:15.712966 [debug] [Thread-4 (]: Began executing node model.grad_project.dim_tower
+[0m20:54:15.715128 [debug] [Thread-4 (]: Writing runtime sql for node "model.grad_project.dim_tower"
+[0m20:54:15.716543 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.dim_date"
+[0m20:54:15.717418 [debug] [Thread-3 (]: Using snowflake connection "model.grad_project.dim_network"
+[0m20:54:15.718408 [debug] [Thread-2 (]: Using snowflake connection "model.grad_project.dim_maintenance"
+[0m20:54:15.718942 [debug] [Thread-1 (]: On model.grad_project.dim_date: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.dim_date"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.dim_date
+         as
+        (
+
+with dates as (
+    select distinct date_trunc('day', created_dt) as dt
+    from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+    where created_dt is not null
+)
+
+select
+    to_number(to_varchar(dt,'YYYYMMDD'))::int as date_id,
+    dt::date as date,
+    date_part(year, dt)  as year,
+    date_part(month, dt) as month,
+    date_part(day, dt)   as day,
+    date_part(dow, dt)   as weekday,
+    date_part(week, dt)  as week_number,
+    case when date_part(dow, dt) in (6,0) then true else false end as is_weekend
+from dates;
+[0m20:54:15.719861 [debug] [Thread-4 (]: Using snowflake connection "model.grad_project.dim_tower"
+[0m20:54:15.720426 [debug] [Thread-3 (]: On model.grad_project.dim_network: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.dim_network"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.dim_network
+         as
+        (
+
+with networks as (
+    select distinct
+        mcc,
+        mnc,
+        radio,
+        signal_strength,
+        network_name,
+        drop_calls,
+        total_calls,
+        drop_rate,
+        avg_load,
+        speed,
+        latency,
+        qoe
+    from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+)
+
+select
+    row_number() over (order by mcc, mnc, radio) as network_id,
+    *
+from networks;
+[0m20:54:15.720931 [debug] [Thread-2 (]: On model.grad_project.dim_maintenance: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.dim_maintenance"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.dim_maintenance
+         as
+        (
+
+with maint as (
+    select distinct
+        maintenance_type,
+        priority,
+        labor_cost_egp,
+        parts_cost_egp,
+        downtime_hours,
+        vendor,
+        notes
+    from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+)
+
+select
+    row_number() over (order by maintenance_type, priority) as maintenance_id,
+    *
+from maint;
+[0m20:54:15.721490 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:54:15.721948 [debug] [Thread-4 (]: On model.grad_project.dim_tower: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.dim_tower"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.dim_tower
+         as
+        (
+
+with towers as (
+    select distinct
+        cid,
+        tac,
+        country,
+        lon,
+        lat,
+        range_m,
+        sam,
+        tower_status,
+        signal_quality,
+        coverage_gap
+    from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+)
+
+select
+    row_number() over (order by cid, tac) as tower_id,
+    *
+from towers;
+[0m20:54:15.722479 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:54:15.722906 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:54:15.723482 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:54:16.526684 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c0da4e-0000-c803-0001-489a0002201a
+[0m20:54:16.527186 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 20 at position 10 unexpected ';'.
+[0m20:54:16.527702 [debug] [Thread-1 (]: On model.grad_project.dim_date: Close
+[0m20:54:16.543877 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c0da4e-0000-c803-0001-489a00022026
+[0m20:54:16.544349 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 20 at position 10 unexpected ';'.
+[0m20:54:16.544808 [debug] [Thread-2 (]: On model.grad_project.dim_maintenance: Close
+[0m20:54:16.546503 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c0da4e-0000-c803-0001-489a00022022
+[0m20:54:16.546985 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 23 at position 11 unexpected ';'.
+[0m20:54:16.547592 [debug] [Thread-3 (]: Snowflake adapter: Snowflake query id: 01c0da4e-0000-c803-0001-489a0002201e
+[0m20:54:16.548185 [debug] [Thread-4 (]: On model.grad_project.dim_tower: Close
+[0m20:54:16.548815 [debug] [Thread-3 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 25 at position 13 unexpected ';'.
+[0m20:54:16.551639 [debug] [Thread-3 (]: On model.grad_project.dim_network: Close
+[0m20:54:16.913775 [debug] [Thread-3 (]: Database Error in model dim_network (models\marts\dim\dim_network.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 25 at position 13 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\dim\dim_network.sql
+[0m20:54:16.918039 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE18AD1010>]}
+[0m20:54:16.925573 [debug] [Thread-4 (]: Database Error in model dim_tower (models\marts\dim\dim_tower.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 23 at position 11 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\dim\dim_tower.sql
+[0m20:54:16.926374 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE18BBD5A0>]}
+[0m20:54:16.924954 [error] [Thread-3 (]: 3 of 4 ERROR creating sql table model SC1.dim_network .......................... [[31mERROR[0m in 1.27s]
+[0m20:54:16.928605 [debug] [Thread-3 (]: Finished running node model.grad_project.dim_network
+[0m20:54:16.927306 [error] [Thread-4 (]: 4 of 4 ERROR creating sql table model SC1.dim_tower ............................ [[31mERROR[0m in 1.28s]
+[0m20:54:16.935179 [debug] [Thread-4 (]: Finished running node model.grad_project.dim_tower
+[0m20:54:16.937929 [debug] [Thread-2 (]: Database Error in model dim_maintenance (models\marts\dim\dim_maintenance.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 20 at position 10 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\dim\dim_maintenance.sql
+[0m20:54:16.939332 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE12C05810>]}
+[0m20:54:16.940263 [error] [Thread-2 (]: 2 of 4 ERROR creating sql table model SC1.dim_maintenance ...................... [[31mERROR[0m in 1.29s]
+[0m20:54:16.946236 [debug] [Thread-1 (]: Database Error in model dim_date (models\marts\dim\dim_date.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 20 at position 10 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\dim\dim_date.sql
+[0m20:54:16.947272 [debug] [Thread-2 (]: Finished running node model.grad_project.dim_maintenance
+[0m20:54:16.948018 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7b0cad7b-2652-4dc9-ac3c-ac0aa0d23392', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE18C41ED0>]}
+[0m20:54:16.949287 [error] [Thread-1 (]: 1 of 4 ERROR creating sql table model SC1.dim_date ............................. [[31mERROR[0m in 1.32s]
+[0m20:54:16.950586 [debug] [Thread-1 (]: Finished running node model.grad_project.dim_date
+[0m20:54:16.953485 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:54:16.953859 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was properly closed.
+[0m20:54:16.954141 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was properly closed.
+[0m20:54:16.954455 [debug] [MainThread]: Connection 'model.grad_project.dim_date' was properly closed.
+[0m20:54:16.954780 [debug] [MainThread]: Connection 'model.grad_project.dim_network' was properly closed.
+[0m20:54:16.955063 [debug] [MainThread]: Connection 'model.grad_project.dim_maintenance' was properly closed.
+[0m20:54:16.955311 [debug] [MainThread]: Connection 'model.grad_project.dim_tower' was properly closed.
+[0m20:54:16.955659 [info ] [MainThread]: 
+[0m20:54:16.956374 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 4.62 seconds (4.62s).
+[0m20:54:16.957981 [debug] [MainThread]: Command end result
+[0m20:54:16.990922 [info ] [MainThread]: 
+[0m20:54:16.991889 [info ] [MainThread]: [31mCompleted with 4 errors and 0 warnings:[0m
+[0m20:54:16.992622 [info ] [MainThread]: 
+[0m20:54:16.993309 [error] [MainThread]:   Database Error in model dim_network (models\marts\dim\dim_network.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 25 at position 13 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\dim\dim_network.sql
+[0m20:54:16.993988 [info ] [MainThread]: 
+[0m20:54:16.994657 [error] [MainThread]:   Database Error in model dim_tower (models\marts\dim\dim_tower.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 23 at position 11 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\dim\dim_tower.sql
+[0m20:54:16.995264 [info ] [MainThread]: 
+[0m20:54:16.995930 [error] [MainThread]:   Database Error in model dim_maintenance (models\marts\dim\dim_maintenance.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 20 at position 10 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\dim\dim_maintenance.sql
+[0m20:54:16.996557 [info ] [MainThread]: 
+[0m20:54:16.997156 [error] [MainThread]:   Database Error in model dim_date (models\marts\dim\dim_date.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 20 at position 10 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\dim\dim_date.sql
+[0m20:54:16.997743 [info ] [MainThread]: 
+[0m20:54:16.998335 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=4 SKIP=0 TOTAL=4
+[0m20:54:16.999450 [debug] [MainThread]: Command `dbt run` failed at 20:54:16.999319 after 6.49 seconds
+[0m20:54:16.999849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE1316B7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE0CFD8FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE18BDC170>]}
+[0m20:54:17.000220 [debug] [MainThread]: Flushing usage events
+[0m20:57:16.596538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4478ADE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44A093C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44A092E90>]}
+
+
+============================== 20:57:16.602926 | 155aa2bb-06db-4ab0-933e-a9aff45f5706 ==============================
+[0m20:57:16.602926 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:57:16.604298 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --models dim_tower dim_network dim_maintenance dim_date', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:57:17.697885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44E8EF360>]}
+[0m20:57:17.754334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44E8D7350>]}
+[0m20:57:17.755707 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:57:17.976020 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m20:57:18.102057 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:57:18.102462 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:57:18.107978 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m20:57:18.149098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44EB3B050>]}
+[0m20:57:18.253405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44EBD1A90>]}
+[0m20:57:18.253937 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m20:57:18.254513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44E8A35B0>]}
+[0m20:57:18.256672 [info ] [MainThread]: 
+[0m20:57:18.257455 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:57:18.262802 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m20:57:18.279700 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m20:57:18.280223 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m20:57:18.280622 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:57:20.263151 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.982 seconds
+[0m20:57:20.266358 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m20:57:20.699983 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m20:57:20.712140 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m20:57:20.712647 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m20:57:20.713060 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:57:21.791850 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.079 seconds
+[0m20:57:21.796535 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m20:57:22.263357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44F03B6C0>]}
+[0m20:57:22.264568 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:57:22.266211 [info ] [MainThread]: 
+[0m20:57:22.273070 [debug] [Thread-1 (]: Began running node model.grad_project.dim_date
+[0m20:57:22.274486 [debug] [Thread-3 (]: Began running node model.grad_project.dim_network
+[0m20:57:22.275676 [info ] [Thread-3 (]: 3 of 4 START sql table model SC1.dim_network ................................... [RUN]
+[0m20:57:22.278047 [debug] [Thread-4 (]: Began running node model.grad_project.dim_tower
+[0m20:57:22.279385 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.grad_project.dim_network'
+[0m20:57:22.281132 [debug] [Thread-3 (]: Began compiling node model.grad_project.dim_network
+[0m20:57:22.280419 [info ] [Thread-4 (]: 4 of 4 START sql table model SC1.dim_tower ..................................... [RUN]
+[0m20:57:22.289912 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.grad_project.dim_tower'
+[0m20:57:22.290508 [debug] [Thread-4 (]: Began compiling node model.grad_project.dim_tower
+[0m20:57:22.291142 [debug] [Thread-2 (]: Began running node model.grad_project.dim_maintenance
+[0m20:57:22.297724 [debug] [Thread-3 (]: Writing injected SQL for node "model.grad_project.dim_network"
+[0m20:57:22.302433 [debug] [Thread-4 (]: Writing injected SQL for node "model.grad_project.dim_tower"
+[0m20:57:22.292090 [info ] [Thread-2 (]: 2 of 4 START sql table model SC1.dim_maintenance ............................... [RUN]
+[0m20:57:22.303473 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.grad_project.dim_maintenance'
+[0m20:57:22.303912 [debug] [Thread-2 (]: Began compiling node model.grad_project.dim_maintenance
+[0m20:57:22.307434 [debug] [Thread-2 (]: Writing injected SQL for node "model.grad_project.dim_maintenance"
+[0m20:57:22.308885 [debug] [Thread-3 (]: Began executing node model.grad_project.dim_network
+[0m20:57:22.308371 [info ] [Thread-1 (]: 1 of 4 START sql table model SC1.dim_date ...................................... [RUN]
+[0m20:57:22.347198 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.dim_date'
+[0m20:57:22.347717 [debug] [Thread-1 (]: Began compiling node model.grad_project.dim_date
+[0m20:57:22.350561 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.dim_date"
+[0m20:57:22.360463 [debug] [Thread-3 (]: Writing runtime sql for node "model.grad_project.dim_network"
+[0m20:57:22.361166 [debug] [Thread-4 (]: Began executing node model.grad_project.dim_tower
+[0m20:57:22.363941 [debug] [Thread-4 (]: Writing runtime sql for node "model.grad_project.dim_tower"
+[0m20:57:22.364848 [debug] [Thread-2 (]: Began executing node model.grad_project.dim_maintenance
+[0m20:57:22.367787 [debug] [Thread-2 (]: Writing runtime sql for node "model.grad_project.dim_maintenance"
+[0m20:57:22.368516 [debug] [Thread-1 (]: Began executing node model.grad_project.dim_date
+[0m20:57:22.371313 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.dim_date"
+[0m20:57:22.373171 [debug] [Thread-3 (]: Using snowflake connection "model.grad_project.dim_network"
+[0m20:57:22.373712 [debug] [Thread-3 (]: On model.grad_project.dim_network: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.dim_network"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.dim_network
+         as
+        (
+
+with networks as (
+    select distinct
+        mcc,
+        mnc,
+        radio,
+        signal_strength,
+        network_name,
+        drop_calls,
+        total_calls,
+        drop_rate,
+        avg_load,
+        speed,
+        latency,
+        qoe
+    from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+)
+
+select
+    row_number() over (order by mcc, mnc, radio) as network_id,
+    mcc,
+    mnc,
+    radio,
+    signal_strength,
+    network_name as network,
+    drop_calls,
+    total_calls,
+    drop_rate,
+    avg_load,
+    speed,
+    latency,
+    qoe
+from networks
+        );
+[0m20:57:22.375141 [debug] [Thread-4 (]: Using snowflake connection "model.grad_project.dim_tower"
+[0m20:57:22.376581 [debug] [Thread-2 (]: Using snowflake connection "model.grad_project.dim_maintenance"
+[0m20:57:22.377397 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:57:22.378627 [debug] [Thread-4 (]: On model.grad_project.dim_tower: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.dim_tower"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.dim_tower
+         as
+        (
+
+with towers as (
+    select distinct
+        cid,
+        tac,
+        country,
+        lon,
+        lat,
+        range_m,
+        sam,
+        tower_status,
+        signal_quality,
+        coverage_gap
+    from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+)
+
+select
+    row_number() over (order by cid, tac) as tower_id,
+    cid,
+    tac,
+    country,
+    lon,
+    lat,
+    range_m as range,
+    sam,
+    tower_status,
+    signal_quality,
+    coverage_gap
+from towers
+        );
+[0m20:57:22.379444 [debug] [Thread-2 (]: On model.grad_project.dim_maintenance: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.dim_maintenance"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.dim_maintenance
+         as
+        (
+
+with maint as (
+    select distinct
+        maintenance_type,
+        priority,
+        labor_cost_egp,
+        parts_cost_egp,
+        downtime_hours,
+        vendor,
+        notes
+    from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+)
+
+select
+    row_number() over (order by maintenance_type, priority) as maintenance_id,
+    maintenance_type,
+    priority,
+    labor_cost_egp,
+    parts_cost_egp,
+    downtime_hours,
+    vendor,
+    notes
+from maint
+        );
+[0m20:57:22.381167 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.dim_date"
+[0m20:57:22.382022 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:57:22.382908 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:57:22.383811 [debug] [Thread-1 (]: On model.grad_project.dim_date: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.dim_date"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.dim_date
+         as
+        (
+
+with dates as (
+    select distinct date_trunc('day', created_dt) as dt
+    from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+    where created_dt is not null
+)
+
+select
+    to_number(to_varchar(dt,'YYYYMMDD'))::int as date_id,
+    dt::date as date,
+    date_part(year, dt)  as year,
+    date_part(month, dt) as month,
+    date_part(day, dt)   as day,
+    date_part(dow, dt)   as weekday,
+    date_part(week, dt)  as week_number,
+    case when date_part(dow, dt) in (6,0) then true else false end as is_weekend
+from dates
+order by date
+        );
+[0m20:57:22.388277 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:57:24.610090 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.222 seconds
+[0m20:57:24.641806 [debug] [Thread-1 (]: On model.grad_project.dim_date: Close
+[0m20:57:24.704582 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 2.322 seconds
+[0m20:57:24.709209 [debug] [Thread-4 (]: On model.grad_project.dim_tower: Close
+[0m20:57:24.714914 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.332 seconds
+[0m20:57:24.719264 [debug] [Thread-2 (]: On model.grad_project.dim_maintenance: Close
+[0m20:57:24.777641 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.400 seconds
+[0m20:57:24.781946 [debug] [Thread-3 (]: On model.grad_project.dim_network: Close
+[0m20:57:24.990274 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44F09C290>]}
+[0m20:57:24.991631 [info ] [Thread-1 (]: 1 of 4 OK created sql table model SC1.dim_date ................................. [[32mSUCCESS 1[0m in 2.64s]
+[0m20:57:24.993710 [debug] [Thread-1 (]: Finished running node model.grad_project.dim_date
+[0m20:57:25.011035 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44F0AB8B0>]}
+[0m20:57:25.011894 [info ] [Thread-4 (]: 4 of 4 OK created sql table model SC1.dim_tower ................................ [[32mSUCCESS 1[0m in 2.72s]
+[0m20:57:25.012926 [debug] [Thread-4 (]: Finished running node model.grad_project.dim_tower
+[0m20:57:25.018837 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44785D310>]}
+[0m20:57:25.019627 [info ] [Thread-2 (]: 2 of 4 OK created sql table model SC1.dim_maintenance .......................... [[32mSUCCESS 1[0m in 2.72s]
+[0m20:57:25.020814 [debug] [Thread-2 (]: Finished running node model.grad_project.dim_maintenance
+[0m20:57:25.093963 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '155aa2bb-06db-4ab0-933e-a9aff45f5706', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44FB3A450>]}
+[0m20:57:25.095669 [info ] [Thread-3 (]: 3 of 4 OK created sql table model SC1.dim_network .............................. [[32mSUCCESS 1[0m in 2.81s]
+[0m20:57:25.097324 [debug] [Thread-3 (]: Finished running node model.grad_project.dim_network
+[0m20:57:25.100167 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:57:25.100792 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was properly closed.
+[0m20:57:25.101316 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was properly closed.
+[0m20:57:25.101755 [debug] [MainThread]: Connection 'model.grad_project.dim_network' was properly closed.
+[0m20:57:25.102171 [debug] [MainThread]: Connection 'model.grad_project.dim_tower' was properly closed.
+[0m20:57:25.102584 [debug] [MainThread]: Connection 'model.grad_project.dim_maintenance' was properly closed.
+[0m20:57:25.103052 [debug] [MainThread]: Connection 'model.grad_project.dim_date' was properly closed.
+[0m20:57:25.103620 [info ] [MainThread]: 
+[0m20:57:25.104500 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 6.85 seconds (6.85s).
+[0m20:57:25.106479 [debug] [MainThread]: Command end result
+[0m20:57:25.150663 [info ] [MainThread]: 
+[0m20:57:25.151649 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:57:25.152372 [info ] [MainThread]: 
+[0m20:57:25.153035 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m20:57:25.154259 [debug] [MainThread]: Command `dbt run` succeeded at 20:57:25.154113 after 8.67 seconds
+[0m20:57:25.154677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44A19B7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B443FC8FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B44FC03D10>]}
+[0m20:57:25.155090 [debug] [MainThread]: Flushing usage events
+[0m20:58:43.047433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240407ADE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024042FA3C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024042FA2E90>]}
+
+
+============================== 20:58:43.053694 | 791fe1c9-4348-4991-9e44-8bf62db5946f ==============================
+[0m20:58:43.053694 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:58:43.054899 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --models fct_cell_performance', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:58:44.170059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '791fe1c9-4348-4991-9e44-8bf62db5946f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240477EF360>]}
+[0m20:58:44.225970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '791fe1c9-4348-4991-9e44-8bf62db5946f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240477D7350>]}
+[0m20:58:44.227628 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:58:44.446116 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m20:58:44.573740 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:58:44.574151 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:58:44.579723 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m20:58:44.618556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '791fe1c9-4348-4991-9e44-8bf62db5946f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024047A3B050>]}
+[0m20:58:44.723915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '791fe1c9-4348-4991-9e44-8bf62db5946f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024047AD5A90>]}
+[0m20:58:44.724431 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m20:58:44.724996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '791fe1c9-4348-4991-9e44-8bf62db5946f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240477A75B0>]}
+[0m20:58:44.726677 [info ] [MainThread]: 
+[0m20:58:44.727482 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:58:44.728669 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m20:58:44.745737 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m20:58:44.746382 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m20:58:44.746815 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:58:47.505964 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.759 seconds
+[0m20:58:47.508919 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m20:58:48.104325 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m20:58:48.118096 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m20:58:48.118527 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m20:58:48.118926 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:58:49.978509 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.859 seconds
+[0m20:58:49.982113 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m20:58:50.325246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '791fe1c9-4348-4991-9e44-8bf62db5946f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024047C4F930>]}
+[0m20:58:50.325885 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:58:50.326481 [info ] [MainThread]: 
+[0m20:58:50.329890 [debug] [Thread-1 (]: Began running node model.grad_project.fct_cell_performance
+[0m20:58:50.330482 [info ] [Thread-1 (]: 1 of 1 START sql incremental model SC1.fct_cell_performance .................... [RUN]
+[0m20:58:50.331341 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.fct_cell_performance'
+[0m20:58:50.331773 [debug] [Thread-1 (]: Began compiling node model.grad_project.fct_cell_performance
+[0m20:58:50.348033 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.fct_cell_performance"
+[0m20:58:50.349947 [debug] [Thread-1 (]: Began executing node model.grad_project.fct_cell_performance
+[0m20:58:50.408669 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.fct_cell_performance"
+[0m20:58:50.410775 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.fct_cell_performance"
+[0m20:58:50.411297 [debug] [Thread-1 (]: On model.grad_project.fct_cell_performance: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.fct_cell_performance"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.fct_cell_performance
+         as
+        (
+
+with base as (
+    select *
+    from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+    
+),
+
+prep as (
+    select
+        b.id as original_id,
+        t.tower_id,
+        n.network_id,
+        to_number(to_varchar(date_trunc('day', b.created_dt),'YYYYMMDD'))::int as date_id,
+        m.maintenance_id,
+        b.created_dt as created_ts,
+        concat(b.id,'_',to_number(to_varchar(date_trunc('day', b.created_dt),'YYYYMMDD'))::int) as unique_row
+    from base b
+    left join ANOMALY_DETECTION_SYSTEM.SC1.dim_tower t
+        on t.cid = b.cid and t.tac = b.tac
+    left join ANOMALY_DETECTION_SYSTEM.SC1.dim_network n
+        on n.mcc = b.mcc and n.mnc = b.mnc and n.radio = b.radio
+    left join ANOMALY_DETECTION_SYSTEM.SC1.dim_maintenance m
+        on m.maintenance_type = b.maintenance_type and m.priority = b.priority
+)
+
+select * from prep;
+[0m20:58:50.411721 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:58:51.260910 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01c0da52-0000-c803-0001-489a0002204a
+[0m20:58:51.261411 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 29 at position 18 unexpected ';'.
+[0m20:58:51.261885 [debug] [Thread-1 (]: On model.grad_project.fct_cell_performance: Close
+[0m20:58:51.602746 [debug] [Thread-1 (]: Database Error in model fct_cell_performance (models\marts\fact\fct_cell_performance.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 29 at position 18 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\fact\fct_cell_performance.sql
+[0m20:58:51.605222 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '791fe1c9-4348-4991-9e44-8bf62db5946f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024047D64A10>]}
+[0m20:58:51.606275 [error] [Thread-1 (]: 1 of 1 ERROR creating sql incremental model SC1.fct_cell_performance ........... [[31mERROR[0m in 1.27s]
+[0m20:58:51.607509 [debug] [Thread-1 (]: Finished running node model.grad_project.fct_cell_performance
+[0m20:58:51.610954 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:58:51.611483 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was properly closed.
+[0m20:58:51.611887 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was properly closed.
+[0m20:58:51.612275 [debug] [MainThread]: Connection 'model.grad_project.fct_cell_performance' was properly closed.
+[0m20:58:51.612677 [info ] [MainThread]: 
+[0m20:58:51.613409 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 6.89 seconds (6.89s).
+[0m20:58:51.614628 [debug] [MainThread]: Command end result
+[0m20:58:51.644398 [info ] [MainThread]: 
+[0m20:58:51.645201 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:58:51.645700 [info ] [MainThread]: 
+[0m20:58:51.646264 [error] [MainThread]:   Database Error in model fct_cell_performance (models\marts\fact\fct_cell_performance.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 29 at position 18 unexpected ';'.
+  compiled code at target\run\grad_project\models\marts\fact\fct_cell_performance.sql
+[0m20:58:51.646677 [info ] [MainThread]: 
+[0m20:58:51.647066 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m20:58:51.647954 [debug] [MainThread]: Command `dbt run` failed at 20:58:51.647836 after 8.76 seconds
+[0m20:58:51.648341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240482D7120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024048A5D770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024048A5D4F0>]}
+[0m20:58:51.648719 [debug] [MainThread]: Flushing usage events
+[0m21:00:42.631270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001893C6FDE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001893EEF3C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001893EEF2E90>]}
+
+
+============================== 21:00:42.637178 | 329d0820-aa20-4094-9ede-3b37391e7b41 ==============================
+[0m21:00:42.637178 [info ] [MainThread]: Running with dbt=1.8.0
+[0m21:00:42.638206 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --models fct_cell_performance', 'send_anonymous_usage_stats': 'True'}
+[0m21:00:43.708837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '329d0820-aa20-4094-9ede-3b37391e7b41', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001894372B360>]}
+[0m21:00:43.763571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '329d0820-aa20-4094-9ede-3b37391e7b41', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018943717350>]}
+[0m21:00:43.764865 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m21:00:43.983636 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m21:00:44.115484 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:00:44.115941 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:00:44.121914 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m21:00:44.161166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '329d0820-aa20-4094-9ede-3b37391e7b41', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001894397F050>]}
+[0m21:00:44.265525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '329d0820-aa20-4094-9ede-3b37391e7b41', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018943A11A90>]}
+[0m21:00:44.266047 [info ] [MainThread]: Found 6 models, 6 data tests, 1 source, 459 macros
+[0m21:00:44.266723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '329d0820-aa20-4094-9ede-3b37391e7b41', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189436E35B0>]}
+[0m21:00:44.268445 [info ] [MainThread]: 
+[0m21:00:44.269337 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:00:44.270476 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m21:00:44.287093 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m21:00:44.287703 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m21:00:44.288025 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:00:46.165335 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.877 seconds
+[0m21:00:46.168571 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m21:00:46.481906 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m21:00:46.491208 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m21:00:46.491624 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m21:00:46.491958 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:00:47.293665 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.802 seconds
+[0m21:00:47.297440 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m21:00:47.594099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '329d0820-aa20-4094-9ede-3b37391e7b41', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018943B8F930>]}
+[0m21:00:47.595177 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:00:47.596054 [info ] [MainThread]: 
+[0m21:00:47.601258 [debug] [Thread-1 (]: Began running node model.grad_project.fct_cell_performance
+[0m21:00:47.601881 [info ] [Thread-1 (]: 1 of 1 START sql incremental model SC1.fct_cell_performance .................... [RUN]
+[0m21:00:47.602641 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.fct_cell_performance'
+[0m21:00:47.603055 [debug] [Thread-1 (]: Began compiling node model.grad_project.fct_cell_performance
+[0m21:00:47.617867 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.fct_cell_performance"
+[0m21:00:47.618958 [debug] [Thread-1 (]: Began executing node model.grad_project.fct_cell_performance
+[0m21:00:47.677372 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.fct_cell_performance"
+[0m21:00:47.679559 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.fct_cell_performance"
+[0m21:00:47.680040 [debug] [Thread-1 (]: On model.grad_project.fct_cell_performance: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.fct_cell_performance"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.fct_cell_performance
+         as
+        (
+
+with base as (
+  select
+    id                       as original_id,
+    cid,
+    tac,
+    mcc,
+    mnc,
+    radio,
+    maintenance_type,
+    priority,
+    created_dt
+  from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+  
+),
+
+prep as (
+  select
+    b.original_id,
+    b.cid,
+    b.tac,
+    b.mcc,
+    b.mnc,
+    b.radio,
+    b.maintenance_type,
+    b.priority,
+    to_timestamp(b.created_dt) as created_ts,
+    to_number(to_varchar(date_trunc('day', to_timestamp(b.created_dt)), 'YYYYMMDD'))::int as date_id,
+    d_t.tower_id,
+    d_n.network_id,
+    d_m.maintenance_id,
+    concat(b.original_id, '_', to_number(to_varchar(date_trunc('day', to_timestamp(b.created_dt)), 'YYYYMMDD'))::int) as unique_row
+  from base b
+  left join ANOMALY_DETECTION_SYSTEM.SC1.dim_tower d_t
+    on d_t.cid = b.cid and d_t.tac = b.tac
+  left join ANOMALY_DETECTION_SYSTEM.SC1.dim_network d_n
+    on d_n.mcc = b.mcc and d_n.mnc = b.mnc and d_n.radio = b.radio
+  left join ANOMALY_DETECTION_SYSTEM.SC1.dim_maintenance d_m
+    on d_m.maintenance_type = b.maintenance_type and d_m.priority = b.priority
+)
+
+
+
+select
+  row_number() over (order by p.created_ts, p.original_id) as fact_id,
+  p.original_id,
+  p.tower_id,
+  p.network_id,
+  p.date_id,
+  p.maintenance_id,
+  p.created_ts,
+  p.unique_row
+from prep p
+
+
+        );
+[0m21:00:47.680514 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:42:42.986811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9E520DE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9E7A13C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9E7A12E90>]}
+
+
+============================== 21:42:42.993432 | f5cb8b81-778d-4430-927f-f926d4e65387 ==============================
+[0m21:42:42.993432 [info ] [MainThread]: Running with dbt=1.8.0
+[0m21:42:42.994664 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --select stg_fact_source', 'send_anonymous_usage_stats': 'True'}
+[0m21:42:44.094047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f5cb8b81-778d-4430-927f-f926d4e65387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9EC25F360>]}
+[0m21:42:44.150446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f5cb8b81-778d-4430-927f-f926d4e65387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9EC247350>]}
+[0m21:42:44.151866 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m21:42:44.374277 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m21:42:44.503271 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:42:44.503688 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:42:44.509312 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m21:42:44.552287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f5cb8b81-778d-4430-927f-f926d4e65387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9EC4AB050>]}
+[0m21:42:44.659733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f5cb8b81-778d-4430-927f-f926d4e65387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9EC545A90>]}
+[0m21:42:44.660262 [info ] [MainThread]: Found 7 models, 6 data tests, 1 source, 459 macros
+[0m21:42:44.660769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5cb8b81-778d-4430-927f-f926d4e65387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9EC2135B0>]}
+[0m21:42:44.662427 [info ] [MainThread]: 
+[0m21:42:44.663210 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:42:44.664367 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m21:42:44.679950 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m21:42:44.680649 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m21:42:44.681501 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:42:46.463420 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.782 seconds
+[0m21:42:46.466051 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m21:42:46.769825 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m21:42:46.782187 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m21:42:46.782958 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m21:42:46.783424 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:42:47.545794 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.762 seconds
+[0m21:42:47.548591 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m21:42:47.837829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f5cb8b81-778d-4430-927f-f926d4e65387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9EC6C7A00>]}
+[0m21:42:47.838467 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:42:47.839058 [info ] [MainThread]: 
+[0m21:42:47.843935 [debug] [Thread-1 (]: Began running node model.grad_project.stg_fact_source
+[0m21:42:47.844561 [info ] [Thread-1 (]: 1 of 1 START sql table model SC1.stg_fact_source ............................... [RUN]
+[0m21:42:47.845268 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.stg_fact_source'
+[0m21:42:47.845647 [debug] [Thread-1 (]: Began compiling node model.grad_project.stg_fact_source
+[0m21:42:47.853195 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.stg_fact_source"
+[0m21:42:47.854409 [debug] [Thread-1 (]: Began executing node model.grad_project.stg_fact_source
+[0m21:42:47.885297 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.stg_fact_source"
+[0m21:42:47.886816 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.stg_fact_source"
+[0m21:42:47.887274 [debug] [Thread-1 (]: On model.grad_project.stg_fact_source: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.stg_fact_source"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.stg_fact_source
+         as
+        (
+
+select
+    id as original_id,
+    cid,
+    tac,
+    mcc,
+    mnc,
+    radio,
+    maintenance_type,
+    priority,
+    to_timestamp(created_dt) as created_ts,
+    to_number(to_varchar(date_trunc('day', to_timestamp(created_dt)), 'YYYYMMDD'))::int as date_id
+from ANOMALY_DETECTION_SYSTEM.SC1.stg_full_telecom
+where created_dt is not null
+        );
+[0m21:42:47.887673 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:42:49.941192 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.053 seconds
+[0m21:42:49.970434 [debug] [Thread-1 (]: On model.grad_project.stg_fact_source: Close
+[0m21:42:50.282081 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f5cb8b81-778d-4430-927f-f926d4e65387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9ED378650>]}
+[0m21:42:50.283255 [info ] [Thread-1 (]: 1 of 1 OK created sql table model SC1.stg_fact_source .......................... [[32mSUCCESS 1[0m in 2.44s]
+[0m21:42:50.284601 [debug] [Thread-1 (]: Finished running node model.grad_project.stg_fact_source
+[0m21:42:50.286667 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:42:50.287035 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM' was properly closed.
+[0m21:42:50.287310 [debug] [MainThread]: Connection 'list_ANOMALY_DETECTION_SYSTEM_SC1' was properly closed.
+[0m21:42:50.287560 [debug] [MainThread]: Connection 'model.grad_project.stg_fact_source' was properly closed.
+[0m21:42:50.288430 [info ] [MainThread]: 
+[0m21:42:50.289579 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 5.63 seconds (5.63s).
+[0m21:42:50.291269 [debug] [MainThread]: Command end result
+[0m21:42:50.326323 [info ] [MainThread]: 
+[0m21:42:50.327311 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:42:50.328085 [info ] [MainThread]: 
+[0m21:42:50.329042 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m21:42:50.330610 [debug] [MainThread]: Command `dbt run` succeeded at 21:42:50.330416 after 7.51 seconds
+[0m21:42:50.331193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9ED3BFE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9ED4E9EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9ED4EA350>]}
+[0m21:42:50.331896 [debug] [MainThread]: Flushing usage events
+[0m21:43:44.376281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A77BDE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A9FB3C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A9FB2E90>]}
+
+
+============================== 21:43:44.382412 | b0948708-2d8e-4693-8672-8822d6519b5b ==============================
+[0m21:43:44.382412 [info ] [MainThread]: Running with dbt=1.8.0
+[0m21:43:44.383497 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Mina Magdy\\grad_project\\logs', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select fct_cell_performance', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:43:45.464537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b0948708-2d8e-4693-8672-8822d6519b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220AE80F360>]}
+[0m21:43:45.520502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b0948708-2d8e-4693-8672-8822d6519b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220AE7F7350>]}
+[0m21:43:45.521990 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m21:43:45.748729 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m21:43:45.876739 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:43:45.877145 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:43:45.882726 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.grad_project.example
+[0m21:43:45.922845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b0948708-2d8e-4693-8672-8822d6519b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220AEA5B050>]}
+[0m21:43:46.027294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b0948708-2d8e-4693-8672-8822d6519b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220AEAF5A90>]}
+[0m21:43:46.027811 [info ] [MainThread]: Found 7 models, 6 data tests, 1 source, 459 macros
+[0m21:43:46.028429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b0948708-2d8e-4693-8672-8822d6519b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220AE7C75B0>]}
+[0m21:43:46.030057 [info ] [MainThread]: 
+[0m21:43:46.030891 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:43:46.032050 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM'
+[0m21:43:46.047174 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM"
+[0m21:43:46.047751 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM"} */
+show terse schemas in database ANOMALY_DETECTION_SYSTEM
+    limit 10000
+[0m21:43:46.048163 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:43:47.681117 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.633 seconds
+[0m21:43:47.683039 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM: Close
+[0m21:43:47.981358 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_ANOMALY_DETECTION_SYSTEM_SC1'
+[0m21:43:47.998002 [debug] [ThreadPool]: Using snowflake connection "list_ANOMALY_DETECTION_SYSTEM_SC1"
+[0m21:43:47.998727 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "connection_name": "list_ANOMALY_DETECTION_SYSTEM_SC1"} */
+show objects in ANOMALY_DETECTION_SYSTEM.SC1 limit 10000
+[0m21:43:47.999725 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:43:48.837665 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.838 seconds
+[0m21:43:48.841953 [debug] [ThreadPool]: On list_ANOMALY_DETECTION_SYSTEM_SC1: Close
+[0m21:43:49.174847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b0948708-2d8e-4693-8672-8822d6519b5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220AED45090>]}
+[0m21:43:49.176051 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:43:49.178105 [info ] [MainThread]: 
+[0m21:43:49.203679 [debug] [Thread-1 (]: Began running node model.grad_project.fct_cell_performance
+[0m21:43:49.208080 [info ] [Thread-1 (]: 1 of 1 START sql table model SC1.fct_cell_performance .......................... [RUN]
+[0m21:43:49.213240 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.grad_project.fct_cell_performance'
+[0m21:43:49.214926 [debug] [Thread-1 (]: Began compiling node model.grad_project.fct_cell_performance
+[0m21:43:49.243267 [debug] [Thread-1 (]: Writing injected SQL for node "model.grad_project.fct_cell_performance"
+[0m21:43:49.248013 [debug] [Thread-1 (]: Began executing node model.grad_project.fct_cell_performance
+[0m21:43:49.360278 [debug] [Thread-1 (]: Writing runtime sql for node "model.grad_project.fct_cell_performance"
+[0m21:43:49.365000 [debug] [Thread-1 (]: Using snowflake connection "model.grad_project.fct_cell_performance"
+[0m21:43:49.366215 [debug] [Thread-1 (]: On model.grad_project.fct_cell_performance: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "grad_project", "target_name": "dev", "node_id": "model.grad_project.fct_cell_performance"} */
+create or replace transient table ANOMALY_DETECTION_SYSTEM.SC1.fct_cell_performance
+         as
+        (
+
+with src as (
+    select * from ANOMALY_DETECTION_SYSTEM.SC1.stg_fact_source
+),
+
+joined as (
+    select
+        s.original_id,
+        t.tower_id,
+        n.network_id,
+        s.date_id,
+        m.maintenance_id,
+        s.created_ts
+    from src s
+    left join ANOMALY_DETECTION_SYSTEM.SC1.dim_tower t
+        on t.cid = s.cid and t.tac = s.tac
+    left join ANOMALY_DETECTION_SYSTEM.SC1.dim_network n
+        on n.mcc = s.mcc and n.mnc = s.mnc and n.radio = s.radio
+    left join ANOMALY_DETECTION_SYSTEM.SC1.dim_maintenance m
+        on m.maintenance_type = s.maintenance_type and m.priority = s.priority
+)
+
+select
+    row_number() over(order by created_ts, original_id) as fact_id,
+    *
+from joined
+        );
+[0m21:43:49.367243 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:26:04.472101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A92288A270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A922480050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A922682210>]}
+
+
+============================== 00:26:04.479747 | 43a795a0-f886-49c0-8dc8-e1fcf0664c68 ==============================
+[0m00:26:04.479747 [info ] [MainThread]: Running with dbt=1.8.0
+[0m00:26:04.480627 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'c:\\Users\\Mina Magdy\\grad_project\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt ', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:26:04.658976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '43a795a0-f886-49c0-8dc8-e1fcf0664c68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9242CA520>]}
+[0m00:26:04.677855 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m00:26:04.679173 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m00:26:04.680242 [debug] [MainThread]: Command `cli deps` succeeded at 00:26:04.680089 after 0.39 seconds
+[0m00:26:04.680626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A925183AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A925460160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A92515A450>]}
+[0m00:26:04.681084 [debug] [MainThread]: Flushing usage events
+[0m00:26:10.162510 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m00:38:21.461167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012686BFA270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126867E0050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126869EE210>]}
+
+
+============================== 00:38:21.465385 | e588e8c3-de65-4905-90c5-21be5c7aec1f ==============================
+[0m00:38:21.465385 [info ] [MainThread]: Running with dbt=1.8.0
+[0m00:38:21.466055 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'c:\\Users\\Mina Magdy\\grad_project\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt ', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:38:21.642375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e588e8c3-de65-4905-90c5-21be5c7aec1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001268863A520>]}
+[0m00:38:21.664319 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m00:38:21.666793 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m00:38:21.667995 [debug] [MainThread]: Command `cli deps` succeeded at 00:38:21.667823 after 0.37 seconds
+[0m00:38:21.668420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012689503AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012689860160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000126894DA450>]}
+[0m00:38:21.668810 [debug] [MainThread]: Flushing usage events
+[0m20:36:39.007072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D5052A270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D50110050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D5031E210>]}
+
+
+============================== 20:36:39.013983 | 8569a788-10a0-4b36-af1c-f29e75aa9db8 ==============================
+[0m20:36:39.013983 [info ] [MainThread]: Running with dbt=1.8.0
+[0m20:36:39.015096 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Mina Magdy\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'c:\\Users\\Mina Magdy\\grad_project\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'True'}
+[0m20:36:39.255514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8569a788-10a0-4b36-af1c-f29e75aa9db8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D51F5A520>]}
+[0m20:36:39.287839 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:36:39.289582 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:36:39.290740 [debug] [MainThread]: Command `cli deps` succeeded at 20:36:39.290576 after 0.49 seconds
+[0m20:36:39.291144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D52E33AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D53100160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D52E0A450>]}
+[0m20:36:39.291528 [debug] [MainThread]: Flushing usage events
