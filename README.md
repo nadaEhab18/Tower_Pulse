@@ -209,3 +209,4 @@ This project provided hands-on experience in:
 📊 analytics, ⚡ real-time streaming, and 🏗 scalable system design.
 
 Built with industry-standard tools and best practices, it reflects the skills and mindset required for modern data engineering roles.
+
