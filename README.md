@@ -1,225 +1,211 @@
-# Tower_Pulse
-Streaming Data System for Cell Towers Operational & Maintenance Coverage
+# 🚀 Tower Pulse  
+### Streaming Data System for Cell Towers Operations & Maintenance
 
-Tower Pulse is an end-to-end data engineering project designed to monitor, analyze, and visualize telecom cell tower performance and maintenance operations using both batch analytics and real-time streaming.
+**Tower Pulse** is an end-to-end **Data Engineering graduation project** developed as part of the  
+🎓 **ITI – Data Engineering Track**.
 
-This project was developed as a Graduation Project for the ITI – Data Engineering Track and demonstrates the design and implementation of a modern data engineering architecture using industry-standard tools and best practices.
+The project delivers a **modern, scalable data platform** that combines **batch analytics** and **real-time streaming** to monitor, analyze, and visualize telecom **cell tower performance and maintenance operations**.
 
-📌 Project Objectives
+---
 
-The main goals of Tower Pulse are to:
+## 🌟 Why Tower Pulse?
 
-Monitor cell tower performance and network health
+Telecom networks generate massive volumes of data every second.  
+Tower Pulse was built to answer critical business and operational questions such as:
 
-Analyze the impact of maintenance activities on service quality
+- Which towers are at **high operational risk**?
+- How does **maintenance impact network quality**?
+- Where are the **coverage gaps**?
+- What is happening **right now** across the network?
 
-Detect coverage gaps and high-risk towers
+---
 
-Provide historical insights and real-time operational visibility
+## 🎯 Project Objectives
 
-Build a scalable, analytics-ready data platform
+Tower Pulse aims to:
 
-🏗️ Architecture Overview
+- 📡 Monitor cell tower performance and network health  
+- 🛠 Analyze the impact of maintenance activities on service quality  
+- ⚠️ Detect high-risk towers and anomalies  
+- 🗺 Identify geographic coverage gaps  
+- 📊 Provide both historical insights and real-time visibility  
+- 🏗 Build a scalable, analytics-ready data platform  
 
-Tower Pulse follows a Modern Data Stack architecture and is divided into two main layers:
+---
 
-1️⃣ Batch Layer (Historical Analytics)
+## 🏗️ Architecture Overview
 
-Handles historical telecom data and supports strategic analysis and reporting.
+Tower Pulse follows a **Modern Data Stack** and is built around **two core layers**:
 
-Flow:
+---
 
+### 1️⃣ Batch Layer – Historical Analytics
+
+Designed for deep analysis, reporting, and business insights.
+
+**Data Flow**
 Python → CSV → Snowflake → dbt → Data Warehouse → Power BI
 
 
-Key Responsibilities:
+**Responsibilities**
 
-Data ingestion and validation
+- Data ingestion & validation  
+- Data cleaning and standardization  
+- Dimensional modeling (Star Schema)  
+- Analytics-ready datasets for BI  
 
-Data cleaning and standardization
+---
 
-Dimensional modeling (Star Schema)
+### 2️⃣ Streaming Layer – Real-Time Monitoring
 
-Analytics-ready data for BI tools
+Designed for low-latency processing and live observability.
 
-2️⃣ Streaming Layer (Real-Time Monitoring)
-
-Processes live events to enable monitoring and alerting.
-
-Flow:
-
+**Data Flow**
 API Producer → Kafka → Spark Streaming → Cassandra → Grafana
 
 
-Key Responsibilities:
+**Responsibilities**
 
-Real-time data ingestion
+- Real-time data ingestion  
+- Streaming transformations & aggregations  
+- Fast time-series storage  
+- Live dashboards and alerting  
 
-Streaming transformations and aggregations
+---
 
-Low-latency storage
+## 📦 Batch Layer Details
 
-Live dashboards and alerts
+### 🔹 Data Ingestion
+- Telecom data is preprocessed using **Python**
+- Exported as **CSV files**
+- Loaded into **Snowflake** staging tables
 
-📦 Batch Layer Details
-🔹 Data Ingestion
+### 🔹 Data Transformation
+Implemented using **dbt**:
+- Business logic transformations  
+- Data quality tests  
+- Documentation & lineage  
+- Reusable, modular SQL models  
 
-Telecom data is preprocessed using Python
+### 🔹 Medallion Architecture
+- **Bronze**: Raw staging data  
+- **Silver**: Cleaned & standardized data  
+- **Gold**: Analytics-ready Star Schema  
 
-Exported as CSV files
+---
 
-Loaded into Snowflake as staging tables
+## 📐 Data Warehouse Design
 
-🔹 Data Transformation
+The warehouse is modeled using a **Star Schema** optimized for analytical workloads.
 
-dbt is used for:
+### ⭐ Fact Table
 
-Data transformations
+**FACT_TOWER_OPS_MAINTENANCE**
 
-Business logic implementation
-
-Data quality checks
-
-Documentation and lineage
-
-🔹 Medallion Architecture
-
-Bronze: Raw staging data
-
-Silver: Cleaned and standardized data
-
-Gold: Analytics-ready Star Schema
-
-📐 Data Warehouse Design
-
-The data warehouse is modeled using a Star Schema optimized for analytical workloads.
-
-⭐ Fact Table
-
-FACT_TOWER_OPS_MAINTENANCE
-
-Represents tower operational and maintenance events
-
-Granularity:
+**Granularity**
 Tower × Maintenance Event × Date
 
-Includes key measures such as:
 
-Drop rate
+**Key Measures**
+- Drop Rate  
+- Downtime Hours  
+- Quality of Experience (QoE)  
+- Latency  
+- Coverage Gap  
+- Signal Quality  
+- Anomaly Indicators  
 
-Downtime hours
+---
 
-Quality of Experience (QoE)
+### 📊 Dimension Tables
 
-Latency
+| Dimension | Description |
+|--------|------------|
+| **DIM_TOWER** | Tower metadata and radio technology |
+| **DIM_LOCATION** | Geographic attributes and location analytics |
+| **DIM_NETWORK** | Network operator and mobile technology |
+| **DIM_DATE** | Time-based analysis (events & maintenance dates) |
+| **DIM_MAINTENANCE_TYPE** | Preventive, predictive, and emergency maintenance |
 
-Coverage gap
+✅ This design ensures:
+- High query performance  
+- Clean and understandable analytics  
+- Easy future extensibility  
 
-Signal quality
+---
 
-Anomaly indicators
+## ⚡ Streaming Layer Details
 
-📊 Dimension Tables
-Dimension	Description
-DIM_TOWER	Tower metadata and radio information
-DIM_LOCATION	Geographic attributes and location analysis
-DIM_NETWORK	Mobile network and operator details
-DIM_DATE	Time-based analysis (created, updated, maintenance dates)
-DIM_MAINTENANCE_TYPE	Maintenance classification (preventive, predictive, emergency)
+- **API Producer** simulates live telecom events  
+- **Apache Kafka** handles event streaming  
+- **Apache Spark Streaming** processes data in real time  
+- **Apache Cassandra** stores low-latency time-series data  
+- **Grafana** visualizes metrics and triggers alerts  
 
-This design ensures:
+---
 
-High query performance
+## 📊 Analytics & Dashboards
 
-Clean analytics
+### 🔹 Power BI (Batch Analytics)
+- Network health overview  
+- Drop rate & QoE trends  
+- Maintenance cost analysis  
+- High-risk tower identification  
+- Geographic coverage analysis  
 
-Easy extensibility
+### 🔹 Grafana (Real-Time Monitoring)
+- Live performance metrics  
+- Tower operational status  
+- Real-time anomaly detection  
 
-⚡ Streaming Layer Details
+---
 
-API Producer simulates real-time telecom events
+## 🛠 Tools & Technologies
 
-Apache Kafka handles event streaming
+### 🧱 Batch & Analytics
+- Python  
+- Snowflake  
+- dbt  
+- SQL  
+- Power BI  
 
-Apache Spark Streaming processes data in real time
+### ⚡ Streaming
+- Apache Kafka  
+- Apache Spark Streaming  
+- Apache Cassandra  
+- Grafana  
 
-Cassandra stores time-series data with low latency
+### ⚙️ Orchestration & DevOps
+- Apache Airflow  
+- Docker  
 
-Grafana provides live dashboards and alerting
+---
 
-📊 Analytics & Dashboards
-Power BI (Batch Analytics)
+## 📈 Key Insights
 
-Network health overview
+- Identified **high-risk towers** with extreme downtime in single events  
+- Analyzed **drop rate vs QoE** relationships  
+- Evaluated **preventive vs emergency maintenance effectiveness**  
+- Detected **geographic coverage gaps**  
+- Linked **maintenance cost directly to network performance**  
 
-Drop rate & QoE trends
+---
 
-Maintenance cost analysis
-
-High-risk tower identification
-
-Geographic coverage analysis
-
-Grafana (Real-Time Monitoring)
-
-Live performance metrics
-
-Tower status monitoring
-
-Real-time anomaly detection
-
-🛠 Tools & Technologies
-
-Batch & Analytics
-
-Python
-
-Snowflake
-
-dbt
-
-SQL
-
-Power BI
-
-Streaming
-
-Apache Kafka
-
-Apache Spark
-
-Cassandra
-
-Grafana
-
-Orchestration & DevOps
-
-Apache Airflow
-
-Docker
-
-📈 Key Insights
-
-Identified high-risk towers with extreme single-event downtime
-
-Analyzed drop rate vs Quality of Experience trends
-
-Evaluated preventive vs emergency maintenance effectiveness
-
-Detected geographic coverage gaps
-
-Linked maintenance cost directly to network performance
-
-🎓 Learning Outcomes
+## 🎓 Learning Outcomes
 
 This project provided hands-on experience in:
 
-Data Engineering & Analytics Engineering
+- Data Engineering & Analytics Engineering  
+- Batch and Streaming Data Pipelines  
+- Dimensional Modeling (Star Schema)  
+- Telecom Network Analytics  
+- Building production-ready data systems  
 
-Batch and Streaming Data Pipelines
+---
 
-Dimensional Modeling (Star Schema)
+## 🏁 Final Note
 
-Telecom Network Analytics
+**Tower Pulse** represents a complete, real-world data engineering solution that bridges  
+📊 analytics, ⚡ real-time streaming, and 🏗 scalable system design.
 
-Building production-ready data systems
+Built with industry-standard tools and best practices, it reflects the skills and mindset required for modern data engineering roles.
